@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,213 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="heartTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usuario" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-DG-STc">
+                                <rect key="frame" x="79" y="248" width="217" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contraseña" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5R-wj-bH3">
+                                <rect key="frame" x="79" y="302" width="217" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicia Sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-qy-ID2">
+                                <rect key="frame" x="117.5" y="190" width="140" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrd-dR-uzH">
+                                <rect key="frame" x="144" y="356" width="87" height="34"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Ingresar">
+                                    <fontDescription key="titleFontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31c-Vf-F6a">
+                                <rect key="frame" x="130" y="420" width="115" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Registrarse"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-jB-RVS">
+                                <rect key="frame" x="99" y="471" width="177" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Olvide mi contraseña"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tr-EC-hZU">
+                                <rect key="frame" x="99" y="85" width="177" height="85"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-M1-L9G">
+                                <rect key="frame" x="40" y="618" width="134" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Aviso de privacidad">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yq-Xc-b0L">
+                                <rect key="frame" x="177" y="618" width="158" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Terminos y condiciones">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.73725490196078436" green="0.8666666666666667" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O5R-wj-bH3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="393-T7-diP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pcv-jB-RVS" secondAttribute="trailing" constant="99" id="4Fh-u0-zeh"/>
+                            <constraint firstItem="CtC-DG-STc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="5Fv-xf-bMc"/>
+                            <constraint firstItem="O5R-wj-bH3" firstAttribute="top" secondItem="CtC-DG-STc" secondAttribute="bottom" constant="20" id="6f1-tt-ehS"/>
+                            <constraint firstItem="0JS-M1-L9G" firstAttribute="top" secondItem="Pcv-jB-RVS" secondAttribute="bottom" constant="116" id="AfK-pt-Eaf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5R-wj-bH3" secondAttribute="trailing" constant="79" id="Fip-2J-bgL"/>
+                            <constraint firstItem="1Tr-EC-hZU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="GUk-1s-jZc"/>
+                            <constraint firstItem="5DS-qy-ID2" firstAttribute="top" secondItem="1Tr-EC-hZU" secondAttribute="bottom" constant="20" id="IlP-Fk-A4U"/>
+                            <constraint firstItem="Pcv-jB-RVS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Om0-3g-uux"/>
+                            <constraint firstItem="31c-Vf-F6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="Q28-PX-8TY"/>
+                            <constraint firstItem="Pcv-jB-RVS" firstAttribute="top" secondItem="31c-Vf-F6a" secondAttribute="bottom" constant="20" id="Rsr-u4-9f7"/>
+                            <constraint firstItem="0JS-M1-L9G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ZuI-Va-CIP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="31c-Vf-F6a" secondAttribute="trailing" constant="130" id="a3C-AK-IaT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Yq-Xc-b0L" secondAttribute="bottom" constant="20" id="aiw-ZU-1X0"/>
+                            <constraint firstItem="5DS-qy-ID2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117.5" id="dRE-Hf-jWi"/>
+                            <constraint firstItem="Qrd-dR-uzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="eue-oN-BgI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0JS-M1-L9G" secondAttribute="bottom" constant="20" id="fHP-5l-Cq4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CtC-DG-STc" secondAttribute="trailing" constant="79" id="fqe-Gl-0k4"/>
+                            <constraint firstItem="Qrd-dR-uzH" firstAttribute="top" secondItem="O5R-wj-bH3" secondAttribute="bottom" constant="20" id="jrV-lX-9cs"/>
+                            <constraint firstItem="31c-Vf-F6a" firstAttribute="top" secondItem="Qrd-dR-uzH" secondAttribute="bottom" constant="30" id="jtW-Ti-dSg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yq-Xc-b0L" secondAttribute="trailing" constant="40" id="l7O-1Y-GuZ"/>
+                            <constraint firstItem="CtC-DG-STc" firstAttribute="top" secondItem="5DS-qy-ID2" secondAttribute="bottom" constant="28" id="qXW-Yi-22C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5DS-qy-ID2" secondAttribute="trailing" constant="117.5" id="ube-LW-ti4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qrd-dR-uzH" secondAttribute="trailing" constant="144" id="v3S-3O-6ON"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgIniciarSesion" destination="1Tr-EC-hZU" id="j1I-xE-r4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="69.715142428785612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ooe-Lz-9cY">
+            <objects>
+                <viewController id="cYm-nL-vAV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XgR-KZ-XSg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Usuario " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-qe-BB3">
+                                <rect key="frame" x="34" y="30" width="163.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="70" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMX-Ba-oWz">
+                                <rect key="frame" x="90" y="131.5" width="195" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kc-Jv-Qsp">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="42"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Medida de Presión" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-PH-Amh">
+                                        <rect key="frame" x="0.0" y="70" width="195" height="42"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Hábitos" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-L6-wVF">
+                                        <rect key="frame" x="0.0" y="140" width="195" height="42"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Medicamentos" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha Próxima Cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-fO-rrD">
+                                <rect key="frame" x="34" y="607.5" width="156" height="25.5"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YR9-Bc-c47"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.86666666670000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GbI-fO-rrD" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="34" id="5tN-jZ-n3H"/>
+                            <constraint firstItem="JMX-Ba-oWz" firstAttribute="top" secondItem="O0O-qe-BB3" secondAttribute="bottom" constant="76" id="CFR-hL-Xuw"/>
+                            <constraint firstItem="O0O-qe-BB3" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="34" id="MbP-mH-geM"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="trailing" secondItem="JMX-Ba-oWz" secondAttribute="trailing" constant="90" id="Rmi-FA-Jnc"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="bottom" secondItem="GbI-fO-rrD" secondAttribute="bottom" constant="34" id="USY-WC-3lT"/>
+                            <constraint firstItem="O0O-qe-BB3" firstAttribute="top" secondItem="YR9-Bc-c47" secondAttribute="top" constant="30" id="ruz-II-wLj"/>
+                            <constraint firstItem="JMX-Ba-oWz" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="90" id="yA1-hp-q5p"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq3-8T-8gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="69.715142428785612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ipq-Ut-Dy7">
+            <objects>
+                <viewController id="H8c-a7-pbb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4a6-sf-Gfo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-jI-D58">
+                                <rect key="frame" x="2" y="20" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medición" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-7e-ksC">
+                                <rect key="frame" x="34" y="81" width="83" height="28"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-Wz-0aR">
+                                <rect key="frame" x="34" y="137" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e02-zs-P8O"/>
+                        <color key="backgroundColor" red="0.73725490196078436" green="0.8666666666666667" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOc-7e-ksC" firstAttribute="top" secondItem="AJp-jI-D58" secondAttribute="bottom" constant="30" id="4Va-W6-qvF"/>
+                            <constraint firstItem="AJp-jI-D58" firstAttribute="top" secondItem="e02-zs-P8O" secondAttribute="top" constant="20" id="EsI-BX-TuH"/>
+                            <constraint firstItem="AJp-jI-D58" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="2" id="KiQ-wH-O2y"/>
+                            <constraint firstItem="cOc-7e-ksC" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="34" id="dUR-Ga-c59"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seM-HJ-e0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381.5999999999999" y="69.715142428785612"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+    </resources>
 </document>
