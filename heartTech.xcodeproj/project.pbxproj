@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78638228E6434D00BE213F /* lobbyViewController.swift */; };
 		FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38428D8EB0400387699 /* AppDelegate.swift */; };
 		FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38628D8EB0400387699 /* SceneDelegate.swift */; };
 		FB98E38928D8EB0400387699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38828D8EB0400387699 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB78638228E6434D00BE213F /* lobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lobbyViewController.swift; path = ViewControllers/lobbyViewController.swift; sourceTree = "<group>"; };
 		FB98E38128D8EB0400387699 /* heartTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB98E38428D8EB0400387699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB98E38628D8EB0400387699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 		FB98E37828D8EB0400387699 = {
 			isa = PBXGroup;
 			children = (
-				FB98E3A128D8FBF500387699 /* Aux.swift */,
 				FB98E38328D8EB0400387699 /* heartTech */,
 				FB98E38228D8EB0400387699 /* Products */,
 			);
@@ -68,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				FB98E38428D8EB0400387699 /* AppDelegate.swift */,
+				FB98E3A128D8FBF500387699 /* Aux.swift */,
+				FB78638228E6434D00BE213F /* lobbyViewController.swift */,
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
 				FB98E38828D8EB0400387699 /* ViewController.swift */,
 				FB98E38A28D8EB0400387699 /* Main.storyboard */,
@@ -161,6 +164,7 @@
 			files = (
 				FB98E38928D8EB0400387699 /* ViewController.swift in Sources */,
 				FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */,
+				FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */,
 				FB98E3A228D8FBF500387699 /* Aux.swift in Sources */,
 				FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //intento de hacer circular la imagen, fallido  !!!!!!!
-        Borrar lo de abajo
+        //Borrar lo de abajo
         imgIniciarSesion.layer.masksToBounds = true
            imgIniciarSesion.layer.cornerRadius = imgIniciarSesion.bounds.width / 2
         
