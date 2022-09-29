@@ -8,9 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imgIniciarSesion: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //intento de hacer circular la imagen, fallido  !!!!!!!
+        Borrar lo de abajo
+        imgIniciarSesion.layer.masksToBounds = true
+           imgIniciarSesion.layer.cornerRadius = imgIniciarSesion.bounds.width / 2
+        
         // Do any additional setup after loading the view.
     }
 
