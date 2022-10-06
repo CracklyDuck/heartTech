@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "vistaRegistro"{
+            let vistaRegistro = segue.destination as! ViewControllerRegistro
+        }
 
 
 }
