@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cYm-nL-vAV">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-785" y="-501"/>
         </scene>
-        <!--View Controller-->
+        <!--Habitos View Controller-->
         <scene sceneID="g9V-In-oW1">
             <objects>
-                <viewController id="2x2-G0-J7Q" sceneMemberID="viewController">
+                <viewController id="2x2-G0-J7Q" customClass="habitosViewController" customModule="heartTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EB1-bS-eGR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="regresar:" destination="2x2-G0-J7Q" eventType="touchUpInside" id="3XB-yh-ob9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Registro de Hábitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-B4-XAe">
                                 <rect key="frame" x="96" y="132" width="182" height="28"/>
@@ -146,6 +149,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-z3-RoI">
                                 <rect key="frame" x="78" y="243" width="219" height="31"/>
+                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Cómo te has alimentado en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-7E-Mg4">
                                 <rect key="frame" x="35" y="315" width="305" height="20"/>
@@ -155,12 +159,23 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-Up-Tsg">
                                 <rect key="frame" x="78" y="353" width="219" height="31"/>
+                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLd-iV-iH8">
                                 <rect key="frame" x="78" y="483" width="219" height="31"/>
+                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-EG-pNj">
+                                <rect key="frame" x="268" y="583" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarPresion:" destination="2x2-G0-J7Q" eventType="touchUpInside" id="sqT-57-T0O"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="En general, ¿cómo te has sentido en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL8-09-snM">
-                                <rect key="frame" x="35" y="425" width="305" height="39.5"/>
+                                <rect key="frame" x="35" y="424" width="305" height="39.5"/>
                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -197,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSK-rR-avX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="-73"/>
+            <point key="canvasLocation" x="1518" y="-501"/>
         </scene>
         <!--Lobby View Controller-->
         <scene sceneID="ooe-Lz-9cY">
@@ -217,6 +232,9 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Medida de Presión" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="H8c-a7-pbb" kind="modal" modalPresentationStyle="fullScreen" id="BJp-3c-Uqr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-PH-Amh">
                                         <rect key="frame" x="0.0" y="70" width="195" height="42"/>
@@ -225,6 +243,9 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Hábitos" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="2x2-G0-J7Q" kind="modal" modalPresentationStyle="fullScreen" id="TuU-Uw-hQY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-L6-wVF">
                                         <rect key="frame" x="0.0" y="140" width="195" height="42"/>
@@ -233,18 +254,28 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Medicamentos" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="yUw-v3-wx9" kind="modal" modalPresentationStyle="fullScreen" id="r56-5Z-pr8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-9R-PVs">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-9R-PVs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido XXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-D4-mEJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ULW-Wo-Tam">
+                                        <rect key="frame" x="127.5" y="0.0" width="247.5" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="t9E-AT-59I"/>
+                                            <constraint firstAttribute="height" constant="68" id="y9m-zu-boH"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.5490196078431373" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -281,12 +312,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bq3-8T-8gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="-501"/>
+            <point key="canvasLocation" x="576.79999999999995" y="-501.49925037481262"/>
         </scene>
-        <!--View Controller-->
+        <!--Toma Presion-->
         <scene sceneID="Ipq-Ut-Dy7">
             <objects>
-                <viewController id="H8c-a7-pbb" sceneMemberID="viewController">
+                <viewController id="H8c-a7-pbb" customClass="tomaPresion" customModule="heartTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4a6-sf-Gfo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,6 +334,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="regresar:" destination="H8c-a7-pbb" eventType="touchUpInside" id="w4w-LT-Qou"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medición" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-7e-ksC">
                                 <rect key="frame" x="34" y="81" width="83" height="28"/>
@@ -372,6 +406,15 @@
                                     <fontDescription key="titleFontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TX-uV-jlc">
+                                <rect key="frame" x="245" y="544" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarPresiones:" destination="H8c-a7-pbb" eventType="touchUpInside" id="6UW-JU-CDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e02-zs-P8O"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,10 +432,13 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btAtras" destination="AJp-jI-D58" id="kNW-cP-OtW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seM-HJ-e0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="-837"/>
+            <point key="canvasLocation" x="1518" y="-1333"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JFe-IA-6pX">
@@ -409,10 +455,10 @@
             </objects>
             <point key="canvasLocation" x="-239" y="448"/>
         </scene>
-        <!--View Controller-->
+        <!--Medicamentos View Controller-->
         <scene sceneID="0ge-uQ-lIx">
             <objects>
-                <viewController id="yUw-v3-wx9" sceneMemberID="viewController">
+                <viewController id="yUw-v3-wx9" customClass="medicamentosViewController" customModule="heartTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="20h-YE-xud">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,6 +475,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="regresar:" destination="yUw-v3-wx9" eventType="touchUpInside" id="CR5-V3-pp9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Cuántas veces olvidaste tus medicamentos esta semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD8-mA-Ohx">
                                 <rect key="frame" x="59" y="237" width="257" height="20"/>
@@ -450,6 +499,15 @@
                                     <segment title="No"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-kb-x5D">
+                                <rect key="frame" x="244" y="542" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarPresion:" destination="yUw-v3-wx9" eventType="touchUpInside" id="pEq-37-Ubz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l6k-T3-rFe"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -467,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Z2-9c-cpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="448"/>
+            <point key="canvasLocation" x="1518" y="332"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7NT-2l-mxv">
@@ -556,6 +614,12 @@
                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-eB-cKA">
+                                <rect key="frame" x="274" y="598" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k1V-Wp-1LE"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -600,6 +664,9 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

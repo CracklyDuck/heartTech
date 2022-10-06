@@ -19,6 +19,9 @@
 		FB98E39E28D8FA7A00387699 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB98E39D28D8FA7A00387699 /* FirebaseFirestore */; };
 		FB98E3A028D8FA7A00387699 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB98E39F28D8FA7A00387699 /* FirebaseStorage */; };
 		FB98E3A228D8FBF500387699 /* Aux.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E3A128D8FBF500387699 /* Aux.swift */; };
+		FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */; };
+		FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */; };
+		FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		FB98E39228D8EB0600387699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB98E3A128D8FBF500387699 /* Aux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aux.swift; sourceTree = "<group>"; };
+		FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomaPresion.swift; sourceTree = "<group>"; };
+		FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitosViewController.swift; sourceTree = "<group>"; };
+		FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicamentosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 				FB98E38428D8EB0400387699 /* AppDelegate.swift */,
 				FB98E3A128D8FBF500387699 /* Aux.swift */,
 				FB78638228E6434D00BE213F /* lobbyViewController.swift */,
+				FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */,
+				FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */,
+				FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */,
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
 				FB98E38828D8EB0400387699 /* ViewController.swift */,
 				FB98E38A28D8EB0400387699 /* Main.storyboard */,
@@ -163,9 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB98E38928D8EB0400387699 /* ViewController.swift in Sources */,
+				FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */,
 				FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */,
 				FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */,
+				FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */,
 				FB98E3A228D8FBF500387699 /* Aux.swift in Sources */,
+				FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */,
 				FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

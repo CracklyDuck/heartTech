@@ -1,29 +1,27 @@
 //
-//  lobbyViewController.swift
+//  medicamentosViewController.swift
 //  heartTech
 //
-//  Created by Alumno on 29/09/22.
+//  Created by Alumno on 05/10/22.
 //
 
 import UIKit
 
-class lobbyViewController: UIViewController {
+class medicamentosViewController: UIViewController {
 
-    @IBOutlet weak var btMedida: UIButton!
-    @IBOutlet weak var btHabitos: UIButton!
-    @IBOutlet weak var btMedicamentos: UIButton!
-    
-    @IBOutlet weak var lbMensaje: UILabel!
-    @IBOutlet weak var lbProximaCita: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func regresar(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func guardarPresion(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     /*
     // MARK: - Navigation
 
