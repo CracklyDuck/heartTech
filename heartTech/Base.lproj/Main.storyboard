@@ -130,57 +130,19 @@
                                     <action selector="regresar:" destination="2x2-G0-J7Q" eventType="touchUpInside" id="3XB-yh-ob9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Registro de Hábitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-B4-XAe">
-                                <rect key="frame" x="96" y="132" width="182" height="28"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Qué tanto ejercicio ha realizado esta semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rp-gf-sc0">
-                                <rect key="frame" x="35" y="205" width="305" height="20"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-z3-RoI">
-                                <rect key="frame" x="78" y="243" width="219" height="31"/>
-                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Cómo te has alimentado en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-7E-Mg4">
-                                <rect key="frame" x="35" y="315" width="305" height="20"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-Up-Tsg">
-                                <rect key="frame" x="78" y="353" width="219" height="31"/>
-                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLd-iV-iH8">
-                                <rect key="frame" x="78" y="483" width="219" height="31"/>
-                                <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-EG-pNj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-EG-pNj">
                                 <rect key="frame" x="268" y="583" width="77" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
                                 <connections>
                                     <action selector="guardarPresion:" destination="2x2-G0-J7Q" eventType="touchUpInside" id="sqT-57-T0O"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="En general, ¿cómo te has sentido en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL8-09-snM">
-                                <rect key="frame" x="35" y="424" width="305" height="39.5"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohl-8N-93N">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-hR-lSb">
-                                        <rect key="frame" x="12" y="21.656847353646071" width="70.000000000000114" height="27.000000000000227"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-hR-lSb">
+                                        <rect key="frame" x="9" y="21" width="70" height="27"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás" buttonSize="small">
@@ -190,45 +152,106 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.54901960780000003" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="Jwt-lb-cNv"/>
+                                    <constraint firstItem="c5K-hR-lSb" firstAttribute="top" secondItem="Ohl-8N-93N" secondAttribute="top" constant="21" id="5MV-MO-1kK"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c5K-hR-lSb" secondAttribute="trailing" constant="20" symbolic="YES" id="9Z4-bp-lMw"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5K-hR-lSb" secondAttribute="bottom" constant="21" id="M81-5o-AGR"/>
+                                    <constraint firstAttribute="width" secondItem="Ohl-8N-93N" secondAttribute="height" multiplier="125:23" id="SEA-ny-tuL"/>
+                                    <constraint firstItem="c5K-hR-lSb" firstAttribute="centerY" secondItem="Ohl-8N-93N" secondAttribute="centerY" id="WUn-oP-e3T"/>
+                                    <constraint firstItem="c5K-hR-lSb" firstAttribute="leading" secondItem="Ohl-8N-93N" secondAttribute="leading" constant="9" id="veA-1b-aaz"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-ZZ-NvQ">
+                                <rect key="frame" x="12" y="146" width="351.5" height="420"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué tanto ejercicio ha realizado esta semana?" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rp-gf-sc0">
+                                        <rect key="frame" x="8" y="42" width="335.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo te has alimentado en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-7E-Mg4">
+                                        <rect key="frame" x="8" y="150" width="335.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-Up-Tsg">
+                                        <rect key="frame" x="68.5" y="188" width="214" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="mGK-8u-ivt"/>
+                                        </constraints>
+                                        <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLd-iV-iH8">
+                                        <rect key="frame" x="68.5" y="296" width="214" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="bpp-bk-y1O"/>
+                                        </constraints>
+                                        <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En general, ¿cómo te has sentido en la última semana?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL8-09-snM">
+                                        <rect key="frame" x="0.0" y="258" width="351.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-z3-RoI">
+                                        <rect key="frame" x="68.5" y="80" width="214" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="tkM-Xh-RBm"/>
+                                        </constraints>
+                                        <color key="thumbTintColor" systemColor="opaqueSeparatorColor"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3Rp-gf-sc0" firstAttribute="leading" secondItem="UJi-ZZ-NvQ" secondAttribute="leadingMargin" id="2oi-4v-WKT"/>
+                                    <constraint firstItem="bXa-Up-Tsg" firstAttribute="top" secondItem="CyH-7E-Mg4" secondAttribute="bottom" constant="18" id="8MS-Q9-F5T"/>
+                                    <constraint firstItem="pfV-z3-RoI" firstAttribute="top" secondItem="3Rp-gf-sc0" secondAttribute="bottom" constant="18" id="BXb-Vv-iZ1"/>
+                                    <constraint firstItem="CyH-7E-Mg4" firstAttribute="leading" secondItem="UJi-ZZ-NvQ" secondAttribute="leadingMargin" id="Gj0-Ua-2Tg"/>
+                                    <constraint firstAttribute="trailing" secondItem="oL8-09-snM" secondAttribute="trailing" id="KTJ-7J-i1X"/>
+                                    <constraint firstItem="pfV-z3-RoI" firstAttribute="centerX" secondItem="UJi-ZZ-NvQ" secondAttribute="centerX" id="X3F-VL-C5A"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="CyH-7E-Mg4" secondAttribute="trailing" id="aY6-hq-hUT"/>
+                                    <constraint firstItem="oL8-09-snM" firstAttribute="top" secondItem="bXa-Up-Tsg" secondAttribute="bottom" constant="40" id="cyc-Y5-Nmz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="3Rp-gf-sc0" secondAttribute="trailing" id="feF-FQ-Lxl"/>
+                                    <constraint firstAttribute="bottom" secondItem="cLd-iV-iH8" secondAttribute="bottom" constant="94" id="lcu-Jm-zDL"/>
+                                    <constraint firstItem="oL8-09-snM" firstAttribute="leading" secondItem="UJi-ZZ-NvQ" secondAttribute="leading" id="rGb-5R-9p6"/>
+                                    <constraint firstItem="bXa-Up-Tsg" firstAttribute="centerX" secondItem="UJi-ZZ-NvQ" secondAttribute="centerX" id="rNT-se-AWG"/>
+                                    <constraint firstItem="cLd-iV-iH8" firstAttribute="top" secondItem="oL8-09-snM" secondAttribute="bottom" constant="18" id="rWn-ro-AR0"/>
+                                    <constraint firstItem="CyH-7E-Mg4" firstAttribute="top" secondItem="pfV-z3-RoI" secondAttribute="bottom" constant="40" id="wFD-g3-4AP"/>
+                                    <constraint firstItem="cLd-iV-iH8" firstAttribute="centerX" secondItem="UJi-ZZ-NvQ" secondAttribute="centerX" id="xdh-OR-jpK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro de Hábitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-B4-XAe">
+                                <rect key="frame" x="96.5" y="88" width="182" height="28"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="heC-MX-q07"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ohl-8N-93N" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" id="21g-KA-GHU"/>
-                            <constraint firstItem="bXa-Up-Tsg" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="80" id="4SF-Mg-Pf3"/>
-                            <constraint firstItem="Ohl-8N-93N" firstAttribute="top" secondItem="heC-MX-q07" secondAttribute="top" id="5HV-2U-TJR"/>
-                            <constraint firstItem="3Rp-gf-sc0" firstAttribute="top" secondItem="9ai-B4-XAe" secondAttribute="bottom" constant="45" id="5UD-RY-Ouh"/>
-                            <constraint firstItem="z6f-9D-fSu" firstAttribute="top" secondItem="heC-MX-q07" secondAttribute="top" constant="20" id="8vL-gC-Ti1"/>
-                            <constraint firstItem="Ohl-8N-93N" firstAttribute="trailing" secondItem="heC-MX-q07" secondAttribute="trailing" id="9lf-0O-7q0"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="cLd-iV-iH8" secondAttribute="trailing" constant="80" id="Bf9-bn-wF1"/>
-                            <constraint firstItem="CyH-7E-Mg4" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="35" id="BhF-6V-keM"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="9ai-B4-XAe" secondAttribute="trailing" constant="96.5" id="C1K-2H-AEz"/>
-                            <constraint firstItem="pfV-z3-RoI" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="80" id="Ewz-Bv-ro5"/>
-                            <constraint firstItem="pfV-z3-RoI" firstAttribute="top" secondItem="3Rp-gf-sc0" secondAttribute="bottom" constant="18" id="Gn3-62-COA"/>
-                            <constraint firstItem="9ai-B4-XAe" firstAttribute="top" secondItem="heC-MX-q07" secondAttribute="top" constant="70" id="NEY-PZ-WdG"/>
-                            <constraint firstItem="z6f-9D-fSu" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="2" id="Ufy-D0-mCp"/>
-                            <constraint firstItem="oL8-09-snM" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="35" id="XrS-PW-olq"/>
-                            <constraint firstItem="bXa-Up-Tsg" firstAttribute="top" secondItem="CyH-7E-Mg4" secondAttribute="bottom" constant="18" id="YQx-nV-0T4"/>
-                            <constraint firstItem="9ai-B4-XAe" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="96.5" id="Yd6-2w-kWn"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="bXa-Up-Tsg" secondAttribute="trailing" constant="80" id="Zpt-01-5ef"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="pfV-z3-RoI" secondAttribute="trailing" constant="80" id="ezv-Co-ci1"/>
-                            <constraint firstItem="cLd-iV-iH8" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="80" id="gID-jr-e4b"/>
-                            <constraint firstItem="oL8-09-snM" firstAttribute="top" secondItem="bXa-Up-Tsg" secondAttribute="bottom" constant="42" id="i9c-EH-boA"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="CyH-7E-Mg4" secondAttribute="trailing" constant="35" id="kKf-bs-jWk"/>
-                            <constraint firstItem="CyH-7E-Mg4" firstAttribute="top" secondItem="pfV-z3-RoI" secondAttribute="bottom" constant="42" id="mXE-Xa-4AS"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="3Rp-gf-sc0" secondAttribute="trailing" constant="35" id="nqM-2w-xaQ"/>
-                            <constraint firstItem="cLd-iV-iH8" firstAttribute="top" secondItem="oL8-09-snM" secondAttribute="bottom" constant="18" id="x9H-fp-ZcD"/>
-                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="oL8-09-snM" secondAttribute="trailing" constant="35" id="xT0-TV-fr6"/>
-                            <constraint firstItem="3Rp-gf-sc0" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="35" id="zvb-Y4-waZ"/>
+                            <constraint firstItem="Ohl-8N-93N" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" id="34U-LL-La3"/>
+                            <constraint firstItem="9ai-B4-XAe" firstAttribute="firstBaseline" secondItem="Ohl-8N-93N" secondAttribute="baseline" constant="40" id="CUg-ZY-JqC"/>
+                            <constraint firstItem="z6f-9D-fSu" firstAttribute="top" secondItem="EB1-bS-eGR" secondAttribute="top" constant="20" symbolic="YES" id="LKu-7E-2yQ"/>
+                            <constraint firstItem="z6f-9D-fSu" firstAttribute="leading" secondItem="heC-MX-q07" secondAttribute="leading" constant="2" id="NEP-Dc-5wQ"/>
+                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="z6f-9D-fSu" secondAttribute="trailing" constant="298" id="VYZ-2f-FK6"/>
+                            <constraint firstItem="Ohl-8N-93N" firstAttribute="top" secondItem="heC-MX-q07" secondAttribute="top" id="XYW-8S-KeL"/>
+                            <constraint firstItem="UJi-ZZ-NvQ" firstAttribute="top" secondItem="9ai-B4-XAe" secondAttribute="bottom" constant="30" id="YIT-UG-Urh"/>
+                            <constraint firstItem="SJA-EG-pNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="heC-MX-q07" secondAttribute="leading" id="ajf-sP-VIT"/>
+                            <constraint firstItem="SJA-EG-pNj" firstAttribute="top" secondItem="UJi-ZZ-NvQ" secondAttribute="bottom" constant="17" id="ao5-NK-v7D"/>
+                            <constraint firstItem="Ohl-8N-93N" firstAttribute="trailing" secondItem="heC-MX-q07" secondAttribute="trailing" id="dNr-uT-w45"/>
+                            <constraint firstItem="heC-MX-q07" firstAttribute="bottom" secondItem="SJA-EG-pNj" secondAttribute="bottom" constant="53" id="gGx-7H-QGc"/>
+                            <constraint firstItem="heC-MX-q07" firstAttribute="trailing" secondItem="SJA-EG-pNj" secondAttribute="trailing" constant="30" id="oGF-B4-VRi"/>
+                            <constraint firstItem="9ai-B4-XAe" firstAttribute="centerX" secondItem="heC-MX-q07" secondAttribute="centerX" id="olM-oT-Jbh"/>
+                            <constraint firstItem="UJi-ZZ-NvQ" firstAttribute="centerX" secondItem="heC-MX-q07" secondAttribute="centerX" id="zMF-oI-2kc"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSK-rR-avX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="-501"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="-501.49925037481262"/>
         </scene>
         <!--Lobby View Controller-->
         <scene sceneID="ooe-Lz-9cY">
@@ -238,8 +261,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" spacing="70" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMX-Ba-oWz">
-                                <rect key="frame" x="90" y="131.5" width="195" height="182"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="66" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMX-Ba-oWz">
+                                <rect key="frame" x="90" y="139" width="195" height="174"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kc-Jv-Qsp">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="42"/>
@@ -253,7 +276,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-PH-Amh">
-                                        <rect key="frame" x="0.0" y="70" width="195" height="42"/>
+                                        <rect key="frame" x="0.0" y="66" width="195" height="42"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Hábitos" cornerStyle="capsule">
@@ -264,7 +287,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-L6-wVF">
-                                        <rect key="frame" x="0.0" y="140" width="195" height="42"/>
+                                        <rect key="frame" x="0.0" y="132" width="195" height="42"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Medicamentos" cornerStyle="capsule">
@@ -276,49 +299,57 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fecha Próxima Cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-fO-rrD">
-                                <rect key="frame" x="16" y="621" width="156" height="25.5"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIe-d3-Ywc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guR-tA-GSJ">
-                                        <rect key="frame" x="145" y="24" width="84" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guR-tA-GSJ">
+                                        <rect key="frame" x="145.5" y="24.5" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-dM-3d7">
-                                        <rect key="frame" x="307" y="0.0" width="68" height="68"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-dM-3d7">
+                                        <rect key="frame" x="307" y="1" width="67" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vFg-dM-3d7" secondAttribute="height" multiplier="1:1" id="SB4-Cc-Wnt"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.5490196078431373" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="Q3n-So-BPB"/>
+                                    <constraint firstAttribute="width" secondItem="nIe-d3-Ywc" secondAttribute="height" multiplier="125:23" id="6hj-en-Sa2"/>
+                                    <constraint firstItem="guR-tA-GSJ" firstAttribute="centerX" secondItem="nIe-d3-Ywc" secondAttribute="centerX" id="Bbo-ia-537"/>
+                                    <constraint firstAttribute="trailing" secondItem="vFg-dM-3d7" secondAttribute="trailing" constant="1" id="O8T-zE-0fJ"/>
+                                    <constraint firstItem="guR-tA-GSJ" firstAttribute="centerY" secondItem="nIe-d3-Ywc" secondAttribute="centerY" id="kJy-sE-bFr"/>
+                                    <constraint firstItem="vFg-dM-3d7" firstAttribute="top" secondItem="nIe-d3-Ywc" secondAttribute="top" constant="1" id="uZ8-Qi-UBA"/>
+                                    <constraint firstAttribute="bottom" secondItem="vFg-dM-3d7" secondAttribute="bottom" constant="1" id="wZV-Un-Ssc"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha Próxima Cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-fO-rrD">
+                                <rect key="frame" x="16" y="621.5" width="156" height="25.5"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YR9-Bc-c47"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GbI-fO-rrD" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="34" id="5tN-jZ-n3H"/>
-                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="trailing" secondItem="YR9-Bc-c47" secondAttribute="trailing" id="AXM-xc-vLa"/>
-                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" id="FcM-NC-xsU"/>
-                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="top" secondItem="YR9-Bc-c47" secondAttribute="top" id="QF5-9L-vgg"/>
-                            <constraint firstItem="YR9-Bc-c47" firstAttribute="trailing" secondItem="JMX-Ba-oWz" secondAttribute="trailing" constant="90" id="Rmi-FA-Jnc"/>
-                            <constraint firstItem="YR9-Bc-c47" firstAttribute="bottom" secondItem="GbI-fO-rrD" secondAttribute="bottom" constant="34" id="USY-WC-3lT"/>
-                            <constraint firstItem="JMX-Ba-oWz" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="90" id="yA1-hp-q5p"/>
+                            <constraint firstItem="JMX-Ba-oWz" firstAttribute="centerX" secondItem="YR9-Bc-c47" secondAttribute="centerX" id="Gef-Pw-ywC"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GbI-fO-rrD" secondAttribute="trailing" symbolic="YES" id="Kai-FD-Qib"/>
+                            <constraint firstItem="GbI-fO-rrD" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="16" id="VY7-nE-wu4"/>
+                            <constraint firstItem="JMX-Ba-oWz" firstAttribute="top" secondItem="nIe-d3-Ywc" secondAttribute="bottom" constant="70" id="fkF-a5-aTs"/>
+                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="top" secondItem="YR9-Bc-c47" secondAttribute="top" id="oWQ-Lu-Msp"/>
+                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" id="rsU-Fx-2uB"/>
+                            <constraint firstItem="nIe-d3-Ywc" firstAttribute="trailing" secondItem="YR9-Bc-c47" secondAttribute="trailing" id="wgb-59-m7E"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="bottom" secondItem="GbI-fO-rrD" secondAttribute="bottom" constant="20" id="zpz-fI-BP2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btHabitos" destination="Vwr-PH-Amh" id="5Wq-bg-sOj"/>
                         <outlet property="btMedicamentos" destination="K5K-L6-wVF" id="dbs-Iy-4VO"/>
                         <outlet property="btMedida" destination="9kc-Jv-Qsp" id="t5I-k6-pZr"/>
+                        <outlet property="lbMensaje" destination="guR-tA-GSJ" id="dR7-u0-otC"/>
                         <outlet property="lbProximaCita" destination="GbI-fO-rrD" id="5tx-8r-zkJ"/>
                     </connections>
                 </viewController>
@@ -334,32 +365,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Medición" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-7e-ksC">
-                                <rect key="frame" x="34" y="81" width="83" height="28"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="jEY-35-CbQ">
-                                <rect key="frame" x="57.5" y="139" width="260" height="188"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jEY-35-CbQ">
+                                <rect key="frame" x="18" y="139" width="339" height="188"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="m56-of-CES">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="188"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sistólica 1 " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-Wz-0aR">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sistólica 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-Wz-0aR">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sistólica 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7R8-0r-Xws">
-                                                <rect key="frame" x="0.0" y="77" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sistólica 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7R8-0r-Xws">
+                                                <rect key="frame" x="0.0" y="77" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sistólica 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkV-hM-zw8">
-                                                <rect key="frame" x="0.0" y="154" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sistólica 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkV-hM-zw8">
+                                                <rect key="frame" x="0.0" y="154" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -367,22 +392,45 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="a95-4Y-6dp">
-                                        <rect key="frame" x="159" y="0.0" width="101" height="188"/>
+                                        <rect key="frame" x="117" y="0.0" width="105" height="188"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Diastólica 1 " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-hG-M1l">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diastólica 1 " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-hG-M1l">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Diastólica 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRA-uo-Smr">
-                                                <rect key="frame" x="0.0" y="77" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diastólica 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRA-uo-Smr">
+                                                <rect key="frame" x="0.0" y="77" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Diastólica 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhh-2t-QPf">
-                                                <rect key="frame" x="0.0" y="154" width="101" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diastólica 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhh-2t-QPf">
+                                                <rect key="frame" x="0.0" y="154" width="105" height="34"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-ZC-Coh">
+                                        <rect key="frame" x="234" y="0.0" width="105" height="188"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ritmo 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2t-bV-chh">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="34"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ritmo 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-VV-62l">
+                                                <rect key="frame" x="0.0" y="77" width="105" height="34"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ritmo 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ui-K4-aUj">
+                                                <rect key="frame" x="0.0" y="154" width="105" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -391,20 +439,20 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Pa1-ZC-Coh" firstAttribute="width" secondItem="a95-4Y-6dp" secondAttribute="width" id="Yk6-74-xbd"/>
                                     <constraint firstItem="a95-4Y-6dp" firstAttribute="width" secondItem="m56-of-CES" secondAttribute="width" id="nfQ-3G-lxt"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U43-4s-q6c">
-                                <rect key="frame" x="57.5" y="357" width="73.5" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U43-4s-q6c">
+                                <rect key="frame" x="18" y="366" width="73.5" height="34"/>
                                 <color key="tintColor" red="0.11372549019607843" green="0.5490196078431373" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Agregar" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TX-uV-jlc">
-                                <rect key="frame" x="245" y="544" width="77" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TX-uV-jlc">
+                                <rect key="frame" x="280.5" y="544" width="76.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
                                 <connections>
@@ -414,9 +462,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gi-Lo-wIP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-jI-D58">
-                                        <rect key="frame" x="12" y="21.656847353646071" width="70.000000000000114" height="27.000000000000227"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-jI-D58">
+                                        <rect key="frame" x="9" y="21" width="69.5" height="27"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás" buttonSize="small">
@@ -429,22 +476,39 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.54901960780000003" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="dLm-ZD-Jgk"/>
+                                    <constraint firstItem="AJp-jI-D58" firstAttribute="top" secondItem="9Gi-Lo-wIP" secondAttribute="top" constant="21" id="E6y-Ju-1dc"/>
+                                    <constraint firstItem="AJp-jI-D58" firstAttribute="leading" secondItem="9Gi-Lo-wIP" secondAttribute="leading" constant="9" id="NPT-f1-Gg3"/>
+                                    <constraint firstAttribute="bottom" secondItem="AJp-jI-D58" secondAttribute="bottom" constant="21" id="YvN-wg-wVJ"/>
+                                    <constraint firstItem="AJp-jI-D58" firstAttribute="centerY" secondItem="9Gi-Lo-wIP" secondAttribute="centerY" id="hYS-jK-wMj"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AJp-jI-D58" secondAttribute="trailing" constant="20" symbolic="YES" id="kbr-ok-YNc"/>
+                                    <constraint firstAttribute="width" secondItem="9Gi-Lo-wIP" secondAttribute="height" multiplier="125:23" id="va9-9O-Fwl"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medición" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-7e-ksC">
+                                <rect key="frame" x="18" y="81" width="83" height="28"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e02-zs-P8O"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jEY-35-CbQ" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="57.5" id="2sa-0j-tMG"/>
-                            <constraint firstItem="U43-4s-q6c" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="57.5" id="5E0-WX-BM1"/>
-                            <constraint firstItem="U43-4s-q6c" firstAttribute="top" secondItem="jEY-35-CbQ" secondAttribute="bottom" constant="30" id="9Hh-VT-7BD"/>
-                            <constraint firstItem="e02-zs-P8O" firstAttribute="trailing" secondItem="jEY-35-CbQ" secondAttribute="trailing" constant="57.5" id="BDq-BF-SKq"/>
-                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="trailing" secondItem="e02-zs-P8O" secondAttribute="trailing" id="G8e-b3-6Bt"/>
-                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" id="I90-HT-JyJ"/>
-                            <constraint firstItem="cOc-7e-ksC" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="34" id="dUR-Ga-c59"/>
-                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="top" secondItem="e02-zs-P8O" secondAttribute="top" id="fof-FS-Sly"/>
-                            <constraint firstItem="jEY-35-CbQ" firstAttribute="top" secondItem="cOc-7e-ksC" secondAttribute="bottom" constant="30" id="qkm-Xa-rAv"/>
+                            <constraint firstItem="1TX-uV-jlc" firstAttribute="top" secondItem="jEY-35-CbQ" secondAttribute="bottom" constant="217" id="0r4-o1-qqh"/>
+                            <constraint firstItem="jEY-35-CbQ" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" constant="18" id="21T-Cr-5UN"/>
+                            <constraint firstItem="e02-zs-P8O" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U43-4s-q6c" secondAttribute="trailing" symbolic="YES" id="4Sd-ni-qf7"/>
+                            <constraint firstItem="cOc-7e-ksC" firstAttribute="leading" secondItem="jEY-35-CbQ" secondAttribute="leading" id="Azh-9E-r8y"/>
+                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="top" secondItem="e02-zs-P8O" secondAttribute="top" id="LfD-Rq-EUJ"/>
+                            <constraint firstItem="U43-4s-q6c" firstAttribute="leading" secondItem="jEY-35-CbQ" secondAttribute="leading" id="NVk-zu-YcU"/>
+                            <constraint firstItem="jEY-35-CbQ" firstAttribute="top" secondItem="cOc-7e-ksC" secondAttribute="bottom" constant="30" id="NWq-Je-gc2"/>
+                            <constraint firstItem="1TX-uV-jlc" firstAttribute="trailing" secondItem="jEY-35-CbQ" secondAttribute="trailing" id="REB-vt-M9j"/>
+                            <constraint firstItem="e02-zs-P8O" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cOc-7e-ksC" secondAttribute="trailing" symbolic="YES" id="SJS-BN-Gly"/>
+                            <constraint firstItem="jEY-35-CbQ" firstAttribute="centerX" secondItem="e02-zs-P8O" secondAttribute="centerX" id="af1-hb-Wfh"/>
+                            <constraint firstItem="jEY-35-CbQ" firstAttribute="top" secondItem="9Gi-Lo-wIP" secondAttribute="bottom" constant="70" id="dfu-VO-YO3"/>
+                            <constraint firstItem="1TX-uV-jlc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e02-zs-P8O" secondAttribute="leading" symbolic="YES" id="hXA-8N-T19"/>
+                            <constraint firstItem="U43-4s-q6c" firstAttribute="top" secondItem="jEY-35-CbQ" secondAttribute="bottom" constant="39" id="obA-Wr-Q3O"/>
+                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="leading" secondItem="e02-zs-P8O" secondAttribute="leading" id="xgT-lJ-YO5"/>
+                            <constraint firstItem="9Gi-Lo-wIP" firstAttribute="trailing" secondItem="e02-zs-P8O" secondAttribute="trailing" id="ycY-p7-RYe"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -455,7 +519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seM-HJ-e0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="-1333"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="-1333.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JFe-IA-6pX">
@@ -491,29 +555,14 @@
                                     <action selector="regresar:" destination="yUw-v3-wx9" eventType="touchUpInside" id="CR5-V3-pp9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Cuántas veces olvidaste tus medicamentos esta semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD8-mA-Ohx">
-                                <rect key="frame" x="59" y="237" width="257" height="20"/>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Registro de Medicamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-Qk-P6A">
-                                <rect key="frame" x="65" y="164" width="246" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro de Medicamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-Qk-P6A">
+                                <rect key="frame" x="64.5" y="88" width="246" height="28"/>
                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ac2-WF-EBK">
-                                <rect key="frame" x="140" y="274" width="95" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Sí"/>
-                                    <segment title="No"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-kb-x5D">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-kb-x5D">
                                 <rect key="frame" x="244" y="542" width="77" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
                                 <connections>
@@ -523,9 +572,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-sa-PwB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-ph-gx7">
-                                        <rect key="frame" x="12" y="21.656847353646071" width="70.000000000000114" height="27.000000000000227"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-ph-gx7">
+                                        <rect key="frame" x="9" y="21" width="70" height="27"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás" buttonSize="small">
@@ -536,29 +584,39 @@
                                 <color key="backgroundColor" red="0.1137254902" green="0.54901960780000003" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="5Z0-cB-gsG"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GVp-ph-gx7" secondAttribute="trailing" constant="20" symbolic="YES" id="NMG-d3-Vhn"/>
+                                    <constraint firstItem="GVp-ph-gx7" firstAttribute="centerY" secondItem="FDe-sa-PwB" secondAttribute="centerY" id="OLF-bO-ZQV"/>
+                                    <constraint firstItem="GVp-ph-gx7" firstAttribute="leading" secondItem="FDe-sa-PwB" secondAttribute="leading" constant="9" id="xQj-TS-6vY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántas veces olvidaste tus medicamentos esta semana?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD8-mA-Ohx">
+                                <rect key="frame" x="1.5" y="146" width="372" height="20"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l6k-T3-rFe"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Smy-Qk-P6A" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" constant="64.5" id="0qa-eL-uWm"/>
-                            <constraint firstItem="qhy-1f-2B5" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" constant="2" id="DcR-DQ-6fY"/>
-                            <constraint firstItem="aD8-mA-Ohx" firstAttribute="top" secondItem="Smy-Qk-P6A" secondAttribute="bottom" constant="45" id="IUs-9V-LOi"/>
-                            <constraint firstItem="FDe-sa-PwB" firstAttribute="trailing" secondItem="l6k-T3-rFe" secondAttribute="trailing" id="MjM-u6-JNF"/>
-                            <constraint firstItem="l6k-T3-rFe" firstAttribute="trailing" secondItem="Smy-Qk-P6A" secondAttribute="trailing" constant="64.5" id="g5L-wA-3hn"/>
-                            <constraint firstItem="qhy-1f-2B5" firstAttribute="top" secondItem="l6k-T3-rFe" secondAttribute="top" constant="20" id="jXo-vB-S55"/>
-                            <constraint firstItem="FDe-sa-PwB" firstAttribute="top" secondItem="l6k-T3-rFe" secondAttribute="top" id="loF-SC-n4M"/>
-                            <constraint firstItem="FDe-sa-PwB" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" id="rjE-ud-eQ2"/>
-                            <constraint firstItem="Smy-Qk-P6A" firstAttribute="top" secondItem="l6k-T3-rFe" secondAttribute="top" constant="70" id="ud1-hT-adG"/>
-                            <constraint firstItem="l6k-T3-rFe" firstAttribute="trailing" secondItem="aD8-mA-Ohx" secondAttribute="trailing" constant="59" id="v6f-p8-7L3"/>
-                            <constraint firstItem="aD8-mA-Ohx" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" constant="59" id="zr7-qo-D1A"/>
+                            <constraint firstItem="FDe-sa-PwB" firstAttribute="trailing" secondItem="l6k-T3-rFe" secondAttribute="trailing" id="0zB-mb-rY4"/>
+                            <constraint firstItem="qhy-1f-2B5" firstAttribute="top" secondItem="20h-YE-xud" secondAttribute="top" constant="20" symbolic="YES" id="25f-Ek-kKw"/>
+                            <constraint firstItem="qhy-1f-2B5" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" constant="2" id="5mh-4y-fB1"/>
+                            <constraint firstItem="aD8-mA-Ohx" firstAttribute="centerX" secondItem="l6k-T3-rFe" secondAttribute="centerX" id="BrU-RV-lTB"/>
+                            <constraint firstItem="FDe-sa-PwB" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" id="KlT-Uo-6ch"/>
+                            <constraint firstItem="FDe-sa-PwB" firstAttribute="top" secondItem="l6k-T3-rFe" secondAttribute="top" id="Klv-5T-YeS"/>
+                            <constraint firstItem="l6k-T3-rFe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qhy-1f-2B5" secondAttribute="trailing" symbolic="YES" id="WYF-2z-FFp"/>
+                            <constraint firstItem="aD8-mA-Ohx" firstAttribute="top" secondItem="Smy-Qk-P6A" secondAttribute="bottom" constant="30" id="acS-U9-LiY"/>
+                            <constraint firstItem="Smy-Qk-P6A" firstAttribute="firstBaseline" secondItem="FDe-sa-PwB" secondAttribute="baseline" constant="40" id="c16-xF-UoF"/>
+                            <constraint firstItem="Smy-Qk-P6A" firstAttribute="centerX" secondItem="l6k-T3-rFe" secondAttribute="centerX" id="mmI-fH-3cw"/>
+                            <constraint firstItem="8nN-kb-x5D" firstAttribute="leading" secondItem="l6k-T3-rFe" secondAttribute="leading" constant="244" id="t3w-qA-oVE"/>
+                            <constraint firstItem="l6k-T3-rFe" firstAttribute="bottom" secondItem="8nN-kb-x5D" secondAttribute="bottom" constant="94" id="yKi-hQ-Eii"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Z2-9c-cpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="332"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="331.48425787106447"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7NT-2l-mxv">
