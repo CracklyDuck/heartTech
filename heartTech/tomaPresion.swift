@@ -9,9 +9,22 @@ import UIKit
 
 class tomaPresion: UIViewController {
     
-    @IBOutlet weak var btAtras: UIButton!
+    @IBOutlet weak var tfSistolica1: UITextField!
+    @IBOutlet weak var tfDiastolica1: UITextField!
+    @IBOutlet weak var tfRitmo1: UITextField!
     
-
+    @IBOutlet weak var tfSistolica2: UITextField!
+    @IBOutlet weak var tfDiastolica2: UITextField!
+    @IBOutlet weak var tfRitmo2: UITextField!
+    
+    @IBOutlet weak var tfSistolica3: UITextField!
+    @IBOutlet weak var tfDiastolica3: UITextField!
+    @IBOutlet weak var tfRitmo3: UITextField!
+    
+    var promedioSist: Float!
+    var promedioDias: Float!
+    var promedioRitm: Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,12 +32,15 @@ class tomaPresion: UIViewController {
     }
     
     @IBAction func regresar(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func guardarPresiones(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        let vistaIni = presentingViewController as! lobbyViewController
+        vistaIni.nuevaPresion(sistolica: <#T##Int#>, Diastolica: <#T##Int#>, ritmo: <#T##Int#>)
+        dismiss(animated: true)
     }
+    
     /*
     // MARK: - Navigation
 
