@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4884628EF81340093D94D /* ViewControllerRegistro.swift */; };
+		21E4884A28EF86820093D94D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884928EF86820093D94D /* FirebaseAuth */; };
+		21E4884C28EF86820093D94D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884B28EF86820093D94D /* FirebaseFirestore */; };
+		21E4884E28EF86820093D94D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884D28EF86820093D94D /* FirebaseStorage */; };
 		FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78638228E6434D00BE213F /* lobbyViewController.swift */; };
 		FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38428D8EB0400387699 /* AppDelegate.swift */; };
 		FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38628D8EB0400387699 /* SceneDelegate.swift */; };
@@ -15,9 +19,6 @@
 		FB98E38E28D8EB0600387699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38D28D8EB0600387699 /* Assets.xcassets */; };
 		FB98E39128D8EB0600387699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */; };
 		FB98E39928D8EC0E00387699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */; };
-		FB98E39C28D8FA7A00387699 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB98E39B28D8FA7A00387699 /* FirebaseAuth */; };
-		FB98E39E28D8FA7A00387699 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB98E39D28D8FA7A00387699 /* FirebaseFirestore */; };
-		FB98E3A028D8FA7A00387699 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB98E39F28D8FA7A00387699 /* FirebaseStorage */; };
 		FB98E3A228D8FBF500387699 /* Aux.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E3A128D8FBF500387699 /* Aux.swift */; };
 		FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */; };
 		FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21E4884628EF81340093D94D /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
 		FB78638228E6434D00BE213F /* lobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lobbyViewController.swift; path = ViewControllers/lobbyViewController.swift; sourceTree = "<group>"; };
 		FB98E38128D8EB0400387699 /* heartTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB98E38428D8EB0400387699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,9 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB98E39C28D8FA7A00387699 /* FirebaseAuth in Frameworks */,
-				FB98E39E28D8FA7A00387699 /* FirebaseFirestore in Frameworks */,
-				FB98E3A028D8FA7A00387699 /* FirebaseStorage in Frameworks */,
+				21E4884A28EF86820093D94D /* FirebaseAuth in Frameworks */,
+				21E4884C28EF86820093D94D /* FirebaseFirestore in Frameworks */,
+				21E4884E28EF86820093D94D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,7 @@
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
 				FB98E38828D8EB0400387699 /* ViewController.swift */,
 				FB98E38A28D8EB0400387699 /* Main.storyboard */,
+				21E4884628EF81340093D94D /* ViewControllerRegistro.swift */,
 				FB98E38D28D8EB0600387699 /* Assets.xcassets */,
 				FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */,
 				FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */,
@@ -108,9 +111,9 @@
 			);
 			name = heartTech;
 			packageProductDependencies = (
-				FB98E39B28D8FA7A00387699 /* FirebaseAuth */,
-				FB98E39D28D8FA7A00387699 /* FirebaseFirestore */,
-				FB98E39F28D8FA7A00387699 /* FirebaseStorage */,
+				21E4884928EF86820093D94D /* FirebaseAuth */,
+				21E4884B28EF86820093D94D /* FirebaseFirestore */,
+				21E4884D28EF86820093D94D /* FirebaseStorage */,
 			);
 			productName = heartTech;
 			productReference = FB98E38128D8EB0400387699 /* heartTech.app */;
@@ -141,7 +144,7 @@
 			);
 			mainGroup = FB98E37828D8EB0400387699;
 			packageReferences = (
-				FB98E39A28D8FA7A00387699 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				21E4884828EF86820093D94D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FB98E38228D8EB0400387699 /* Products */;
 			projectDirPath = "";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB98E38928D8EB0400387699 /* ViewController.swift in Sources */,
+				21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */,
 				FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */,
 				FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */,
 				FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */,
@@ -398,30 +402,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FB98E39A28D8FA7A00387699 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		21E4884828EF86820093D94D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FB98E39B28D8FA7A00387699 /* FirebaseAuth */ = {
+		21E4884928EF86820093D94D /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB98E39A28D8FA7A00387699 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 21E4884828EF86820093D94D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		FB98E39D28D8FA7A00387699 /* FirebaseFirestore */ = {
+		21E4884B28EF86820093D94D /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB98E39A28D8FA7A00387699 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 21E4884828EF86820093D94D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		FB98E39F28D8FA7A00387699 /* FirebaseStorage */ = {
+		21E4884D28EF86820093D94D /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB98E39A28D8FA7A00387699 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 21E4884828EF86820093D94D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
