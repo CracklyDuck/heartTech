@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         if segue.identifier == "vistaRegistro"{
             let vistaRegistro = segue.destination as! ViewControllerRegistro
         }
-
-
+    }
 }
 

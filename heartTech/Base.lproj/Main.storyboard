@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSK-rR-avX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="486"/>
+            <point key="canvasLocation" x="1617" y="484"/>
         </scene>
         <!--Lobby View Controller-->
         <scene sceneID="ooe-Lz-9cY">
@@ -422,7 +422,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-QV-Yf9">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-QV-Yf9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.54901960780000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
@@ -434,13 +434,13 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Registro de usuario " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-T1-IyW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro de usuario " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-T1-IyW">
                                 <rect key="frame" x="94" y="116" width="186" height="28"/>
                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Zsz-Lv-Zbe">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Zsz-Lv-Zbe">
                                 <rect key="frame" x="47" y="158" width="281" height="383"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-au-lP5">
@@ -620,34 +620,46 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Registrarse" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="12"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registrarse:" destination="QNZ-Wx-e7b" eventType="touchUpInside" id="47C-J3-anp"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-N8-g1O">
-                                <rect key="frame" x="58" y="570" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1137254902" green="0.54901960780000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Aviso de privacidad">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-no-n8R">
-                                <rect key="frame" x="206" y="570" width="148" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1137254902" green="0.54901960780000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Términos y condiciones">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
-                                </buttonConfiguration>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-bH-a3M">
+                                <rect key="frame" x="58" y="570" width="303" height="27.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-N8-g1O">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="27.5"/>
+                                        <color key="tintColor" red="0.1137254902" green="0.54901960780000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Aviso de privacidad">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-no-n8R">
+                                        <rect key="frame" x="155.5" y="0.0" width="147.5" height="27.5"/>
+                                        <color key="tintColor" red="0.1137254902" green="0.54901960780000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Términos y condiciones">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kRJ-Rg-Cad"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Zsz-Lv-Zbe" firstAttribute="top" secondItem="Sb1-T1-IyW" secondAttribute="bottom" constant="14" id="35V-y9-kf2"/>
+                            <constraint firstItem="Sb1-T1-IyW" firstAttribute="top" secondItem="ezc-QV-Yf9" secondAttribute="bottom" constant="34" id="4UY-WQ-5Tb"/>
                             <constraint firstItem="ezc-QV-Yf9" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" id="7h5-vf-83t"/>
                             <constraint firstItem="8uI-fa-Sgh" firstAttribute="top" secondItem="kRJ-Rg-Cad" secondAttribute="top" constant="20" id="8fS-6M-AUD"/>
+                            <constraint firstItem="3Wm-Zw-UPA" firstAttribute="top" secondItem="SVu-bH-a3M" secondAttribute="bottom" constant="9.5" id="BYe-kx-V6s"/>
+                            <constraint firstItem="ezc-QV-Yf9" firstAttribute="top" secondItem="kRJ-Rg-Cad" secondAttribute="top" id="EDT-Fl-fqq"/>
                             <constraint firstItem="Zsz-Lv-Zbe" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" constant="47" id="QTL-mm-WkW"/>
                             <constraint firstItem="kRJ-Rg-Cad" firstAttribute="trailing" secondItem="3Wm-Zw-UPA" secondAttribute="trailing" constant="143" id="R5N-OT-Iq9"/>
                             <constraint firstItem="ezc-QV-Yf9" firstAttribute="trailing" secondItem="kRJ-Rg-Cad" secondAttribute="trailing" id="Tl9-TW-Y9i"/>
+                            <constraint firstItem="SVu-bH-a3M" firstAttribute="top" secondItem="Zsz-Lv-Zbe" secondAttribute="bottom" constant="29" id="Zr3-0J-7Lr"/>
+                            <constraint firstItem="SVu-bH-a3M" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" constant="58" id="aEb-B6-oAo"/>
                             <constraint firstItem="kRJ-Rg-Cad" firstAttribute="bottom" secondItem="3Wm-Zw-UPA" secondAttribute="bottom" constant="29" id="gg4-xE-Skt"/>
                             <constraint firstItem="ezc-QV-Yf9" firstAttribute="top" secondItem="kRJ-Rg-Cad" secondAttribute="top" id="iNf-Ro-Jop"/>
                             <constraint firstItem="kRJ-Rg-Cad" firstAttribute="trailing" secondItem="Zsz-Lv-Zbe" secondAttribute="trailing" constant="47" id="mKo-Qh-Vui"/>
@@ -655,9 +667,22 @@
                             <constraint firstItem="8uI-fa-Sgh" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" constant="2" id="rMU-s9-QL0"/>
                             <constraint firstItem="Sb1-T1-IyW" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" constant="94" id="rya-Dn-zKJ"/>
                             <constraint firstItem="3Wm-Zw-UPA" firstAttribute="leading" secondItem="kRJ-Rg-Cad" secondAttribute="leading" constant="143" id="sdg-ij-BFI"/>
+                            <constraint firstItem="kRJ-Rg-Cad" firstAttribute="trailing" secondItem="SVu-bH-a3M" secondAttribute="trailing" constant="14" id="y7d-Pp-ZUH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WLD-9N-XiY"/>
+                    <connections>
+                        <outlet property="tfRegAltura" destination="CCf-rx-CMc" id="04l-Ih-KzF"/>
+                        <outlet property="tfRegAncho" destination="FQt-hN-w3S" id="BRa-tk-GJH"/>
+                        <outlet property="tfRegConfPassword" destination="b2e-zq-M72" id="aOu-xy-gHr"/>
+                        <outlet property="tfRegCorreo" destination="t32-yM-4bP" id="xer-Pi-kBR"/>
+                        <outlet property="tfRegDia" destination="bOw-gR-0j2" id="SIG-14-8wb"/>
+                        <outlet property="tfRegMes" destination="Syk-ih-2Sm" id="mZb-yh-Tqa"/>
+                        <outlet property="tfRegNombre" destination="fsi-mc-F4x" id="0Kj-ak-XuM"/>
+                        <outlet property="tfRegPassword" destination="F2Z-Qx-Uef" id="BCn-NY-BVp"/>
+                        <outlet property="tfRegPeso" destination="B0s-Gx-781" id="84g-PH-8QF"/>
+                        <outlet property="tfRegYear" destination="36v-Jj-nsu" id="Akt-A6-hob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MS-rg-csQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
