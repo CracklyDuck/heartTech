@@ -1,13 +1,13 @@
 //
-//  medicamentosViewController.swift
+//  fichaMedicaViewController.swift
 //  heartTech
 //
-//  Created by Alumno on 05/10/22.
+//  Created by Alumno on 10/10/22.
 //
 
 import UIKit
 
-class medicamentosViewController: UIViewController {
+class fichaMedicaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +15,7 @@ class medicamentosViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func regresar(_ sender: UIButton) {
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func guardarPresion(_ sender: UIButton) {
-        let vistaIni = presentingViewController as! lobbyViewController
-        vistaIni.medicamentos(faltantes: <#T##Int#>)
-        dismiss(animated: true)
-    }
+
     /*
     // MARK: - Navigation
 
