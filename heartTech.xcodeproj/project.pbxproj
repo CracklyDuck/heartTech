@@ -11,6 +11,7 @@
 		21E4884A28EF86820093D94D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884928EF86820093D94D /* FirebaseAuth */; };
 		21E4884C28EF86820093D94D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884B28EF86820093D94D /* FirebaseFirestore */; };
 		21E4884E28EF86820093D94D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884D28EF86820093D94D /* FirebaseStorage */; };
+		FB627C3A28F4CAD40032DBF9 /* fichaMedicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */; };
 		FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78638228E6434D00BE213F /* lobbyViewController.swift */; };
 		FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38428D8EB0400387699 /* AppDelegate.swift */; };
 		FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38628D8EB0400387699 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		21E4884628EF81340093D94D /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
+		FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fichaMedicaViewController.swift; sourceTree = "<group>"; };
 		FB78638228E6434D00BE213F /* lobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lobbyViewController.swift; path = ViewControllers/lobbyViewController.swift; sourceTree = "<group>"; };
 		FB98E38128D8EB0400387699 /* heartTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB98E38428D8EB0400387699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,14 +80,15 @@
 			children = (
 				FB98E38428D8EB0400387699 /* AppDelegate.swift */,
 				FB98E3A128D8FBF500387699 /* Aux.swift */,
+				FB98E38828D8EB0400387699 /* ViewController.swift */,
+				21E4884628EF81340093D94D /* ViewControllerRegistro.swift */,
 				FB78638228E6434D00BE213F /* lobbyViewController.swift */,
+				FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */,
 				FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */,
 				FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */,
 				FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */,
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
-				FB98E38828D8EB0400387699 /* ViewController.swift */,
 				FB98E38A28D8EB0400387699 /* Main.storyboard */,
-				21E4884628EF81340093D94D /* ViewControllerRegistro.swift */,
 				FB98E38D28D8EB0600387699 /* Assets.xcassets */,
 				FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */,
 				FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB98E38928D8EB0400387699 /* ViewController.swift in Sources */,
+				FB627C3A28F4CAD40032DBF9 /* fichaMedicaViewController.swift in Sources */,
 				21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */,
 				FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */,
 				FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */,

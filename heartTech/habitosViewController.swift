@@ -20,7 +20,9 @@ class habitosViewController: UIViewController {
     }
     
     @IBAction func guardarPresion(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        let vistaIni = presentingViewController as! lobbyViewController
+        vistaIni.habitos(ejercicio: <#T##Int#>, alimentacion: <#T##Int#>, estadoGeneral: <#T##Int#>)
+        dismiss(animated: true)
     }
     /*
     // MARK: - Navigation

@@ -23,6 +23,17 @@ class lobbyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func nuevaPresion(sistolica: Int, Diastolica: Int, ritmo: Int){
+        
+    }
+    
+    func habitos(ejercicio: Int, alimentacion: Int, estadoGeneral: Int) {
+        
+    }
+    
+    func medicamentos(faltantes: Int) {
+        
+    }
 
     /*
     // MARK: - Navigation
