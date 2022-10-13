@@ -8,6 +8,12 @@
 import UIKit
 
 class habitosViewController: UIViewController {
+    
+    
+    @IBOutlet weak var sEjercicio: UISlider!
+    @IBOutlet weak var sAlimentacion: UISlider!
+    @IBOutlet weak var sEstadoGeneral: UISlider!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +27,7 @@ class habitosViewController: UIViewController {
     
     @IBAction func guardarPresion(_ sender: UIButton) {
         let vistaIni = presentingViewController as! lobbyViewController
-        vistaIni.habitos(ejercicio: <#T##Int#>, alimentacion: <#T##Int#>, estadoGeneral: <#T##Int#>)
+        vistaIni.habitos(ejercicio: Int(sEjercicio.value), alimentacion: Int(sAlimentacion.value), estadoGeneral: Int(sEstadoGeneral.value))
         dismiss(animated: true)
     }
     /*

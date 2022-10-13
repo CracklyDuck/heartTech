@@ -21,10 +21,6 @@ class tomaPresion: UIViewController {
     @IBOutlet weak var tfDiastolica3: UITextField!
     @IBOutlet weak var tfRitmo3: UITextField!
     
-    var promedioSist: Float!
-    var promedioDias: Float!
-    var promedioRitm: Float!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,12 +28,53 @@ class tomaPresion: UIViewController {
     }
     
     @IBAction func regresar(_ sender: UIButton) {
-        dismiss(animated: true)
+        
+        if ((tfSistolica1.text! != "") || (tfDiastolica1.text! != "") || (tfRitmo1.text! != "")) {
+            let alerta = UIAlertController(title: "Error", message: "Salir sin guardar la información?", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel)
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        } else {
+            dismiss(animated: true)
+        }
     }
     
     @IBAction func guardarPresiones(_ sender: UIButton) {
+        
+        var promedioSist: Int!
+        var promedioDias: Int!
+        var promedioRitm: Int!
+        
+        if let sis1 = Int(tfSistolica1.text!),
+           let dia1 = Int(tfDiastolica1.text!),
+           let ritm1 = Int(tfRitmo1.text!) {
+            promedioSist += sis1
+            promedioDias += dia1
+            promedioRitm += ritm1
+            
+            if let sis2 = Int(tfSistolica2.text!),
+               let dia2 = Int(tfDiastolica2.text!),
+               let ritm2 = Int(tfRitmo2.text!) {
+                promedioSist += sis2
+                promedioDias += dia2
+                promedioRitm += ritm2
+                
+                if let sis3 = Int(tfSistolica3.text!),
+                   let dia3 = Int(tfDiastolica3.text!),
+                   let ritm3 = Int(tfRitmo3.text!) {
+                    promedioSist += sis3
+                    promedioDias += dia3
+                    promedioRitm += ritm3
+                    
+                }
+            }
+        }
+        
+        promedioSist = Int(tfDiastolica1.text! + tfDiastolica1.text! + tfDiastolica1.text!)! / 3
+        promedioDias = Int(tfDiastolica1.text! + tfDiastolica1.text! + tfDiastolica1.text!)! / 3
+        promedioRitm = Int(tfRitmo1.text! + tfRitmo1.text! + tfRitmo1.text!)! / 3
         let vistaIni = presentingViewController as! lobbyViewController
-        vistaIni.nuevaPresion(sistolica: <#T##Int#>, Diastolica: <#T##Int#>, ritmo: <#T##Int#>)
+        vistaIni.nuevaPresion(sistolica: promedioSist, Diastolica: promedioDias, ritmo: promedioRitm)
         dismiss(animated: true)
     }
     

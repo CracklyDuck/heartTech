@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class lobbyViewController: UIViewController {
 
@@ -16,23 +17,27 @@ class lobbyViewController: UIViewController {
     @IBOutlet weak var lbMensaje: UILabel!
     @IBOutlet weak var lbProximaCita: UILabel!
     
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func nuevaPresion(sistolica: Int, Diastolica: Int, ritmo: Int){
-        
+        //Inserta funcion para guardar en la BD
     }
     
     func habitos(ejercicio: Int, alimentacion: Int, estadoGeneral: Int) {
-        
+        //Inserta funcion para guardar en la BD
     }
     
     func medicamentos(faltantes: Int) {
-        
+        //Inserta funcion para guardar en la BD
     }
 
     /*
