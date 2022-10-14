@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class lobbyViewController: UIViewController {
+class lobbyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var btMedida: UIButton!
     @IBOutlet weak var btHabitos: UIButton!
@@ -16,6 +16,8 @@ class lobbyViewController: UIViewController {
     
     @IBOutlet weak var lbMensaje: UILabel!
     @IBOutlet weak var lbProximaCita: UILabel!
+    
+    @IBOutlet weak var topBar: UIView!
     
     override func viewDidLoad() {
         
@@ -39,6 +41,23 @@ class lobbyViewController: UIViewController {
     func medicamentos(faltantes: Int) {
         //Inserta funcion para guardar en la BD
     }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "menuPopOver") {
+            let menu = segue.destination as! menuPopOverViewController
+            menu.popoverPresentationController?.delegate = self
+            menu.height = view.frame.size.height
+            //menu.edge = topBar.UIRectEdge
+        }
+    }
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation

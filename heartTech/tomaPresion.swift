@@ -31,8 +31,12 @@ class tomaPresion: UIViewController {
         
         if ((tfSistolica1.text! != "") || (tfDiastolica1.text! != "") || (tfRitmo1.text! != "")) {
             let alerta = UIAlertController(title: "Error", message: "Salir sin guardar la información?", preferredStyle: .alert)
-            let accion = UIAlertAction(title: "OK", style: .cancel)
+            let accion = UIAlertAction(title: "Sí", style: .default) {action in
+                self.dismiss(animated: true)
+            }
             alerta.addAction(accion)
+            let accionCancelar = UIAlertAction(title: "No", style: .destructive)
+            alerta.addAction(accionCancelar)
             present(alerta, animated: true)
         } else {
             dismiss(animated: true)
