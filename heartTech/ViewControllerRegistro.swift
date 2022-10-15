@@ -29,13 +29,40 @@ class ViewControllerRegistro: UIViewController {
     }
     
     
-    @IBAction func registrarse(_ sender: Any) {
-        let alerta = UIAlertController(title: "Privacidad", message: "Al registrarse, acepta los términos y codiciones de esta aplicación.", preferredStyle: .alert)
-        let accion = UIAlertAction(title: "OK", style: .cancel)
-        alerta.addAction(accion)
-        present(alerta, animated: true)
-        }
+    @IBAction func atras(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func registrarse(_ sender: Any) {
+        
+        if tfRegNombre.text == "" || tfRegMes.text == "" || tfRegDia.text == "" || tfRegYear.text == "" || tfRegCorreo.text == "" || tfRegPassword.text == "" || tfRegConfPassword.text == "" {
+            let alerta = UIAlertController(title: "Error", message: "No se pueden guardar los cambios porque hay campos vacíos.", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel)
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        }
+        
+        else if let checarPass1 = tfRegPassword.text,
+                let checarPass2 = tfRegConfPassword.text,
+                checarPass1 != checarPass2 {
+            let alerta = UIAlertController(title: "Error", message: "Las contraseñas ingresadas no coinciden.", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel)
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        }
+        
+        else {
+            self.dismiss(animated: true, completion: nil)
+            //let alerta = UIAlertController(title: "Privacidad", message: "Al registrarse, acepta los términos y codiciones de esta aplicación.", preferredStyle: .alert)
+            //let accion = UIAlertAction(title: "OK", style: .cancel)
+            //alerta.addAction(accion)
+            //present(alerta, animated: true)
+        }
+
+    }
+    
+    
     
 
     /*
@@ -48,3 +75,4 @@ class ViewControllerRegistro: UIViewController {
     }
     */
 
+}

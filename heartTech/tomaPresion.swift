@@ -35,11 +35,13 @@ class tomaPresion: UIViewController {
         dismiss(animated: true)
     }
     
+    /*
     @IBAction func guardarPresiones(_ sender: UIButton) {
         let vistaIni = presentingViewController as! lobbyViewController
         vistaIni.nuevaPresion(sistolica: <#T##Int#>, Diastolica: <#T##Int#>, ritmo: <#T##Int#>)
         dismiss(animated: true)
     }
+     */
     
     /*
     // MARK: - Navigation

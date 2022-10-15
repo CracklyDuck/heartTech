@@ -18,12 +18,14 @@ class habitosViewController: UIViewController {
     @IBAction func regresar(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-    
+  
+    /*
     @IBAction func guardarPresion(_ sender: UIButton) {
         let vistaIni = presentingViewController as! lobbyViewController
         vistaIni.habitos(ejercicio: <#T##Int#>, alimentacion: <#T##Int#>, estadoGeneral: <#T##Int#>)
         dismiss(animated: true)
     }
+     */
     /*
     // MARK: - Navigation
 

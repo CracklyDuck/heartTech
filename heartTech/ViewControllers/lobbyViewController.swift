@@ -23,6 +23,11 @@ class lobbyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if segue.identifier == "fichaMed"{
+            //let vistaFicha = segue.destination as! fichaMedicaViewController
+            //vistaFicha.nombreEscrito = tfNombre.text!
+
     func nuevaPresion(sistolica: Int, Diastolica: Int, ritmo: Int){
         
     }
@@ -34,7 +39,7 @@ class lobbyViewController: UIViewController {
     func medicamentos(faltantes: Int) {
         
     }
-
+}
     /*
     // MARK: - Navigation
 
@@ -45,4 +50,4 @@ class lobbyViewController: UIViewController {
     }
     */
 
-}
+
