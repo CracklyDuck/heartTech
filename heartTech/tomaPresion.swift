@@ -43,7 +43,6 @@ class tomaPresion: UIViewController {
         }
     }
     
-    /*
     @IBAction func guardarPresiones(_ sender: UIButton) {
         
         var promedioSist = 0
@@ -105,11 +104,11 @@ class tomaPresion: UIViewController {
             }
             let vistaIni = presentingViewController as! lobbyViewController
             //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
-            print(String(promedioSist) + " " + String(promedioDias) + " " + String(promedioRitm))
-            dismiss(animated: true)
+            print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
+            //dismiss(animated: true)
         }
     }
-     */
+    
     
     /*
     // MARK: - Navigation

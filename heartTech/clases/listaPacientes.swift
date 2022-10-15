@@ -8,7 +8,7 @@
 import UIKit
 
 class listaPacientes: NSObject, Codable {
-    var idPaciente: Int!
+    var idPaciente: String!
     var idDoctor: Int!
     var siguienteCita: Date!
 }

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseCore
 
 class lobbyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    var correo = "trejo.fabian@hotmail.com"
     
     var paciente: paciente!
 
@@ -24,7 +25,9 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBOutlet weak var topBar: UIView!
     
     override func viewDidLoad() {
-        
+        //getPaciente()
+        //self.paciente.nombre = "Fabian"
+        //lbMensaje.text = "¡Bienvenido " + paciente.nombre + "!"
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -33,6 +36,26 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    func getPaciente() {
+        let db = Firestore.firestore()
+        db.collection("paciente").whereField("idPaciente", isEqualTo: correo).getDocuments(){ (QuerySnapshot, err) in
+            if let err = err {
+                print("Error al conseguir documentos: \(err)")
+            } else {
+                for document in QuerySnapshot!.documents {
+                    let data = document.data()
+                    self.paciente.idPaciente = self.correo
+                    self.paciente.correo = self.correo
+                    self.paciente.nombre = (data["nombre"] as! String)
+                
+                    //HACER EL RESTO
+                }
+            }
+            
+        }
+    }
+    
     
     func nuevaPresion(sistolica: Int, diastolica: Int, ritmo: Int){
         let db = Firestore.firestore()

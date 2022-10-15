@@ -8,7 +8,7 @@
 import UIKit
 
 class paciente: NSObject, Codable {
-    var idPaciente: Int!
+    var idPaciente: String!
     var correo: String!
     var contrasena: String!
     var nombre: String!

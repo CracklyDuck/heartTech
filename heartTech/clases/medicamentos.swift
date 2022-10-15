@@ -8,11 +8,11 @@
 import UIKit
 
 class medicamentos: NSObject, Codable {
-    var idPaciente: Int!
+    var idPaciente: String!
     var fecha: Date!
     var faltantes: Int!
     
-    init(idPaciente: Int, fecha: Date, faltantes: Int) {
+    init(idPaciente: String, fecha: Date, faltantes: Int) {
         self.idPaciente = idPaciente
         self.fecha = Date()
         self.faltantes = faltantes
