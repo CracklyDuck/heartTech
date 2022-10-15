@@ -16,12 +16,18 @@ class menuPopOverViewController: UIViewController {
         
         super.viewDidLoad()
         
-        preferredContentSize = CGSize(width: 200, height: height)
+        preferredContentSize = CGSize(width: 200, height: 500)
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func cerrarSesión(_ sender: Any) {
+        let lobby = presentingViewController
+        lobby?.dismiss(animated: true)
+    }
+    
     /*
-    // MARK: - Navigation
+    
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

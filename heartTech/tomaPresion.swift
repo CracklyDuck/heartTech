@@ -30,12 +30,12 @@ class tomaPresion: UIViewController {
     @IBAction func regresar(_ sender: UIButton) {
         
         if ((tfSistolica1.text! != "") || (tfDiastolica1.text! != "") || (tfRitmo1.text! != "")) {
-            let alerta = UIAlertController(title: "Error", message: "Salir sin guardar la información?", preferredStyle: .alert)
-            let accion = UIAlertAction(title: "Sí", style: .default) {action in
+            let alerta = UIAlertController(title: "Advertencia", message: "Salir sin guardar la información?", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "Sí", style: .cancel) {action in
                 self.dismiss(animated: true)
             }
             alerta.addAction(accion)
-            let accionCancelar = UIAlertAction(title: "No", style: .destructive)
+            let accionCancelar = UIAlertAction(title: "No", style: .default)
             alerta.addAction(accionCancelar)
             present(alerta, animated: true)
         } else {
@@ -45,41 +45,68 @@ class tomaPresion: UIViewController {
     
     @IBAction func guardarPresiones(_ sender: UIButton) {
         
-        var promedioSist: Int!
-        var promedioDias: Int!
-        var promedioRitm: Int!
+        var promedioSist = 0
+        var promedioDias = 0
+        var promedioRitm = 0
         
-        if let sis1 = Int(tfSistolica1.text!),
-           let dia1 = Int(tfDiastolica1.text!),
-           let ritm1 = Int(tfRitmo1.text!) {
-            promedioSist += sis1
-            promedioDias += dia1
-            promedioRitm += ritm1
-            
-            if let sis2 = Int(tfSistolica2.text!),
-               let dia2 = Int(tfDiastolica2.text!),
-               let ritm2 = Int(tfRitmo2.text!) {
-                promedioSist += sis2
-                promedioDias += dia2
-                promedioRitm += ritm2
+        if (tfSistolica1.text! == "" && tfDiastolica1.text! == "" && tfRitmo1.text! == "") {
+            let alerta = UIAlertController(title: "Error", message: "Llena al menos una medida de toma de presion", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel) {action in
+                self.dismiss(animated: true)
+            }
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        } else {
+            if (tfSistolica1.text! == "" || tfDiastolica1.text! == "" || tfRitmo1.text! == "") {
+                let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 1", preferredStyle: .alert)
+                let accion = UIAlertAction(title: "OK", style: .cancel) {action in
+                    self.dismiss(animated: true)
+                }
+                alerta.addAction(accion)
+                present(alerta, animated: true)
+            } else {
+                promedioSist += Int(tfSistolica1.text!)!
+                promedioDias += Int(tfDiastolica1.text!)!
+                promedioRitm += Int(tfRitmo1.text!)!
                 
-                if let sis3 = Int(tfSistolica3.text!),
-                   let dia3 = Int(tfDiastolica3.text!),
-                   let ritm3 = Int(tfRitmo3.text!) {
-                    promedioSist += sis3
-                    promedioDias += dia3
-                    promedioRitm += ritm3
+                if (tfSistolica2.text! != "" && tfDiastolica2.text! != "" && tfRitmo2.text! != "") {
+                    promedioSist += Int(tfSistolica2.text!)!
+                    promedioDias += Int(tfDiastolica2.text!)!
+                    promedioRitm += Int(tfRitmo2.text!)!
                     
+                    if (tfSistolica3.text! != "" && tfDiastolica3.text! != "" && tfRitmo3.text! != "") {
+                        promedioSist += Int(tfSistolica3.text!)!
+                        promedioDias += Int(tfDiastolica3.text!)!
+                        promedioRitm += Int(tfRitmo3.text!)!
+                        promedioSist = promedioSist / 3
+                        promedioDias = promedioDias / 3
+                        promedioRitm = promedioRitm / 3
+                    } else if(tfSistolica3.text! != "" || tfDiastolica3.text! != "" || tfRitmo3.text! != ""){
+                        let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 3", preferredStyle: .alert)
+                        let accion = UIAlertAction(title: "OK", style: .cancel) {action in
+                            self.dismiss(animated: true)
+                        }
+                        alerta.addAction(accion)
+                        present(alerta, animated: true)
+                    } else {
+                        promedioSist = promedioSist / 2
+                        promedioDias = promedioDias / 2
+                        promedioRitm = promedioRitm / 2
+                    }
+                } else if(tfSistolica2.text! != "" || tfDiastolica2.text! != "" || tfRitmo2.text! != ""){
+                    let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 2", preferredStyle: .alert)
+                    let accion = UIAlertAction(title: "OK", style: .cancel) {action in
+                        self.dismiss(animated: true)
+                    }
+                    alerta.addAction(accion)
+                    present(alerta, animated: true)
                 }
             }
+            let vistaIni = presentingViewController as! lobbyViewController
+            //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+            print(String(promedioSist) + " " + String(promedioDias) + " " + String(promedioRitm))
+            dismiss(animated: true)
         }
-        
-        promedioSist = Int(tfDiastolica1.text! + tfDiastolica1.text! + tfDiastolica1.text!)! / 3
-        promedioDias = Int(tfDiastolica1.text! + tfDiastolica1.text! + tfDiastolica1.text!)! / 3
-        promedioRitm = Int(tfRitmo1.text! + tfRitmo1.text! + tfRitmo1.text!)! / 3
-        let vistaIni = presentingViewController as! lobbyViewController
-        vistaIni.nuevaPresion(sistolica: promedioSist, Diastolica: promedioDias, ritmo: promedioRitm)
-        dismiss(animated: true)
     }
     
     /*

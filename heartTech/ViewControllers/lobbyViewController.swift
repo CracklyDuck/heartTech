@@ -7,8 +7,12 @@
 
 import UIKit
 import SwiftUI
+import Firebase
+import FirebaseCore
 
 class lobbyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
+    var paciente: paciente!
 
     @IBOutlet weak var btMedida: UIButton!
     @IBOutlet weak var btHabitos: UIButton!
@@ -30,15 +34,39 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
         return .lightContent
     }
     
-    func nuevaPresion(sistolica: Int, Diastolica: Int, ritmo: Int){
+    func nuevaPresion(sistolica: Int, diastolica: Int, ritmo: Int){
+        let db = Firestore.firestore()
+        let _ = db.collection("registroPresion").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "sistolica": sistolica, "diastolica": diastolica, "ritmo": ritmo]) { err in
+            if err == nil {
+                print("Error al postear presion")
+            } else {
+                print("OK")
+            }
+        }
         //Inserta funcion para guardar en la BD
     }
     
     func habitos(ejercicio: Int, alimentacion: Int, estadoGeneral: Int) {
+        let db = Firestore.firestore()
+        let _ = db.collection("registroHabitos").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "ejercicio": ejercicio, "alimentacion": alimentacion, "satisfaccion": estadoGeneral]) { err in
+            if err == nil {
+                print("Error al postear habitos")
+            } else {
+                print("OK")
+            }
+        }
         //Inserta funcion para guardar en la BD
     }
     
     func medicamentos(faltantes: Int) {
+        let db = Firestore.firestore()
+        let _ = db.collection("registroMedicamentos").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "tomado": faltantes]) { err in
+            if err == nil {
+                print("Error al postear medicamentos")
+            } else {
+                print("OK")
+            }
+        }
         //Inserta funcion para guardar en la BD
     }
     
