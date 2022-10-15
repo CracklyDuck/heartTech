@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -327,13 +327,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-qi-ycy">
+                                <rect key="frame" x="249.5" y="616" width="109.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Ficha Médica"/>
+                                <connections>
+                                    <segue destination="pQc-sE-BvS" kind="modal" identifier="fichaMed" modalPresentationStyle="fullScreen" id="nhK-4E-YEX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YR9-Bc-c47"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JMX-Ba-oWz" firstAttribute="centerX" secondItem="YR9-Bc-c47" secondAttribute="centerX" id="Gef-Pw-ywC"/>
                             <constraint firstItem="YR9-Bc-c47" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GbI-fO-rrD" secondAttribute="trailing" symbolic="YES" id="Kai-FD-Qib"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="bottom" secondItem="rJH-qi-ycy" secondAttribute="bottom" constant="20" id="RMA-h5-YZl"/>
                             <constraint firstItem="GbI-fO-rrD" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" constant="16" id="VY7-nE-wu4"/>
+                            <constraint firstItem="YR9-Bc-c47" firstAttribute="trailing" secondItem="rJH-qi-ycy" secondAttribute="trailing" constant="16" id="d47-JJ-nuj"/>
                             <constraint firstItem="JMX-Ba-oWz" firstAttribute="top" secondItem="nIe-d3-Ywc" secondAttribute="bottom" constant="70" id="fkF-a5-aTs"/>
                             <constraint firstItem="nIe-d3-Ywc" firstAttribute="top" secondItem="YR9-Bc-c47" secondAttribute="top" id="oWQ-Lu-Msp"/>
                             <constraint firstItem="nIe-d3-Ywc" firstAttribute="leading" secondItem="YR9-Bc-c47" secondAttribute="leading" id="rsU-Fx-2uB"/>
@@ -352,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bq3-8T-8gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310" y="-501"/>
+            <point key="canvasLocation" x="309.60000000000002" y="-501.49925037481262"/>
         </scene>
         <!--Toma Presion-->
         <scene sceneID="Ipq-Ut-Dy7">
@@ -545,6 +555,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="atras:" destination="QNZ-Wx-e7b" eventType="touchUpInside" id="If4-u6-CoF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro de usuario " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-T1-IyW">
                                 <rect key="frame" x="94" y="116" width="186" height="28"/>
@@ -611,7 +624,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOw-gR-0j2">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz8-OS-sWg">
                                                 <rect key="frame" x="47" y="0.0" width="5" height="34"/>
@@ -622,7 +635,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Syk-ih-2Sm">
                                                 <rect key="frame" x="54" y="0.0" width="52.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-ZW-GtS">
                                                 <rect key="frame" x="108.5" y="0.0" width="5" height="34"/>
@@ -633,7 +646,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="aaaa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36v-Jj-nsu">
                                                 <rect key="frame" x="115.5" y="0.0" width="58.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -669,7 +682,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0s-Gx-781">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-oX-VcY">
                                                         <rect key="frame" x="37" y="0.0" width="21" height="34"/>
@@ -689,7 +702,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-rx-CMc">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-C8-qFu">
                                                         <rect key="frame" x="37" y="0.0" width="16.5" height="34"/>
@@ -705,7 +718,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-hN-w3S">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-K8-7e9">
                                                         <rect key="frame" x="36" y="0.0" width="24" height="34"/>
@@ -872,10 +885,10 @@
             </objects>
             <point key="canvasLocation" x="1559" y="375"/>
         </scene>
-        <!--View Controller-->
+        <!--Ficha Medica View Controller-->
         <scene sceneID="7NT-2l-mxv">
             <objects>
-                <viewController id="pQc-sE-BvS" sceneMemberID="viewController">
+                <viewController id="pQc-sE-BvS" customClass="fichaMedicaViewController" customModule="heartTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrd-lV-yx8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -892,6 +905,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Atrás">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="regresarMenu:" destination="pQc-sE-BvS" eventType="touchUpInside" id="Puq-uD-yWe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ficha Médica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-1T-eqv">
                                 <rect key="frame" x="127" y="91.5" width="120.5" height="28"/>
@@ -907,6 +923,7 @@
                                     <fontDescription key="titleFontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="btGuardarCambios:" destination="pQc-sE-BvS" eventType="touchUpInside" id="sEY-Zs-iBt"/>
                                     <action selector="registrarse:" destination="QNZ-Wx-e7b" eventType="touchUpInside" id="8wY-fm-vYy"/>
                                 </connections>
                             </button>
@@ -937,7 +954,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDT-WF-mso">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-xf-4Xh">
                                                 <rect key="frame" x="47" y="0.0" width="5" height="34"/>
@@ -948,7 +965,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-Xd-ept">
                                                 <rect key="frame" x="54" y="0.0" width="52.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-Yx-oio">
                                                 <rect key="frame" x="108.5" y="0.0" width="5" height="34"/>
@@ -959,7 +976,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="aaaa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdB-O6-chL">
                                                 <rect key="frame" x="115.5" y="0.0" width="58.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -973,7 +990,7 @@
                                         <rect key="frame" x="0.0" y="199.5" width="61" height="34"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-2z-XOA">
                                         <rect key="frame" x="0.0" y="244.5" width="49" height="25.5"/>
@@ -985,7 +1002,7 @@
                                         <rect key="frame" x="0.0" y="281" width="61" height="34"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ancho Cintura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bya-Aq-ZH0">
                                         <rect key="frame" x="0.0" y="326" width="114.5" height="25.5"/>
@@ -997,7 +1014,7 @@
                                         <rect key="frame" x="0.0" y="362.5" width="61" height="34"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -1024,10 +1041,20 @@
                             <constraint firstItem="adt-8q-AvF" firstAttribute="leading" secondItem="k1V-Wp-1LE" secondAttribute="leading" constant="2" id="rFH-1c-8ZY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btGuardar" destination="A4E-iv-Mjj" id="ShH-hk-jwW"/>
+                        <outlet property="tfAltura" destination="SND-2i-Uoh" id="syM-Q1-ffi"/>
+                        <outlet property="tfCintura" destination="kKs-Iw-NjH" id="Vch-9x-oL5"/>
+                        <outlet property="tfDia" destination="tDT-WF-mso" id="Bep-to-dBP"/>
+                        <outlet property="tfMes" destination="gJt-Xd-ept" id="pU5-Cn-kEe"/>
+                        <outlet property="tfNombre" destination="dPn-IG-y5b" id="Zr9-Tj-CEi"/>
+                        <outlet property="tfPeso" destination="JDW-zi-nzq" id="W1p-ic-24T"/>
+                        <outlet property="tfYear" destination="jdB-O6-chL" id="Cts-rn-eUw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="An7-Jz-bG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82.400000000000006" y="-1209.4452773613195"/>
+            <point key="canvasLocation" x="1082" y="-1089"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nfu-xT-Yu2">

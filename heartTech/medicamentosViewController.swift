@@ -19,11 +19,13 @@ class medicamentosViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    /*
     @IBAction func guardarPresion(_ sender: UIButton) {
         let vistaIni = presentingViewController as! lobbyViewController
         vistaIni.medicamentos(faltantes: <#T##Int#>)
         dismiss(animated: true)
     }
+     */
     /*
     // MARK: - Navigation
 
