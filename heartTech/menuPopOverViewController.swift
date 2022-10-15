@@ -1,33 +1,33 @@
 //
-//  medicamentosViewController.swift
+//  menuPopOverViewController.swift
 //  heartTech
 //
-//  Created by Alumno on 05/10/22.
+//  Created by Alumno on 13/10/22.
 //
 
 import UIKit
 
-class medicamentosViewController: UIViewController {
+class menuPopOverViewController: UIViewController {
+    
+    var height: CGFloat!
+    var edge: UIRectEdge!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        preferredContentSize = CGSize(width: 200, height: 500)
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func regresar(_ sender: UIButton) {
-        self.dismiss(animated: true)
+    @IBAction func cerrarSesión(_ sender: Any) {
+        let lobby = presentingViewController
+        lobby?.dismiss(animated: true)
     }
     
     /*
-    @IBAction func guardarPresion(_ sender: UIButton) {
-        let vistaIni = presentingViewController as! lobbyViewController
-        vistaIni.medicamentos(faltantes: Int(1))
-        dismiss(animated: true)
-    }
-     */
-    /*
-    // MARK: - Navigation
+    
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
