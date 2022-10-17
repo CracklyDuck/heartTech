@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DD0EDE28FDD3B100CBAEE4 /* infoPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */; };
 		21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4884628EF81340093D94D /* ViewControllerRegistro.swift */; };
 		21E4884A28EF86820093D94D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884928EF86820093D94D /* FirebaseAuth */; };
 		21E4884C28EF86820093D94D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884B28EF86820093D94D /* FirebaseFirestore */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoPaciente.swift; sourceTree = "<group>"; };
 		21E4884628EF81340093D94D /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
 		FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fichaMedicaViewController.swift; sourceTree = "<group>"; };
 		FB78638228E6434D00BE213F /* lobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lobbyViewController.swift; path = ViewControllers/lobbyViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				FB78638228E6434D00BE213F /* lobbyViewController.swift */,
 				FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */,
 				FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */,
+				21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */,
 				FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */,
 				FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */,
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
@@ -186,6 +189,7 @@
 				FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */,
 				FB98E3A228D8FBF500387699 /* Aux.swift in Sources */,
 				FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */,
+				21DD0EDE28FDD3B100CBAEE4 /* infoPaciente.swift in Sources */,
 				FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
