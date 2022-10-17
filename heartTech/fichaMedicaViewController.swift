@@ -18,7 +18,7 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var tfCintura: UITextField!
     @IBOutlet weak var btGuardar: UIButton!
     
-    var listaInfo = [infoPaciente]()
+    var listaInfo = [paciente]()
     var defaults = UserDefaults.standard
 
     
@@ -62,7 +62,7 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
         listaInfo.removeAll()
         do {
             let data = try Data.init(contentsOf: dataFilePath())
-            listaInfo = try PropertyListDecoder().decode([infoPaciente].self, from: data)
+            listaInfo = try PropertyListDecoder().decode([paciente].self, from: data)
         }
         catch{
             print("Error al leer los datos")

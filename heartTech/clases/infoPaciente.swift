@@ -7,7 +7,7 @@
 
 import UIKit
 
-class infoPaciente: Codable {
+class infoPaciente: NSObject, Codable {
     var nombre : String
     var dia : String!
     var mes : String!

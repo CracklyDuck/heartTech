@@ -26,6 +26,18 @@ class medicamentosViewController: UIViewController {
     }
     
     @IBAction func regresar(_ sender: UIButton) {
+        if (numero > 0) {
+            let alerta = UIAlertController(title: "Advertencia", message: "¿Salir sin guardar la información?", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "Sí", style: .cancel) {action in
+                self.dismiss(animated: true)
+            }
+            alerta.addAction(accion)
+            let accionCancelar = UIAlertAction(title: "No", style: .default)
+            alerta.addAction(accionCancelar)
+            present(alerta, animated: true)
+        } else {
+            dismiss(animated: true)
+        }
         self.dismiss(animated: true)
     }
     
@@ -44,7 +56,9 @@ class medicamentosViewController: UIViewController {
     }
     
     @IBAction func guardar(_ sender: Any) {
-        
+        let vistaIni = presentingViewController as! lobbyViewController
+        vistaIni.medicamentos(faltantes: numero)
+        dismiss(animated: true)
     }
     
     

@@ -11,9 +11,11 @@ import Firebase
 import FirebaseCore
 
 class lobbyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-    var correo = "trejo.fabian@hotmail.com"
     
-    var paciente: paciente!
+    
+    let correo = "trejo.fabian@hotmail.com"
+    
+    var paciente1: paciente!
 
     @IBOutlet weak var btMedida: UIButton!
     @IBOutlet weak var btHabitos: UIButton!
@@ -25,8 +27,8 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBOutlet weak var topBar: UIView!
     
     override func viewDidLoad() {
-        //getPaciente()
-        //self.paciente.nombre = "Fabian"
+        getPaciente()
+        //paciente1.nombre = "Fabian"
         //lbMensaje.text = "¡Bienvenido " + paciente.nombre + "!"
         super.viewDidLoad()
 
@@ -39,17 +41,14 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func getPaciente() {
         let db = Firestore.firestore()
-        db.collection("paciente").whereField("idPaciente", isEqualTo: correo).getDocuments(){ (QuerySnapshot, err) in
+        db.collection("paciente").whereField("idPaciente", isEqualTo: correo).getDocuments(){ [self] (QuerySnapshot, err) in
             if let err = err {
                 print("Error al conseguir documentos: \(err)")
             } else {
                 for document in QuerySnapshot!.documents {
                     let data = document.data()
-                    self.paciente.idPaciente = self.correo
-                    self.paciente.correo = self.correo
-                    self.paciente.nombre = (data["nombre"] as! String)
-                
-                    //HACER EL RESTO
+                    paciente1 = paciente(idPaciente: self.correo, correo: correo, contrasena: data["contrasena"] as! String, nombre: data["nombre"] as! String, fechaNacimiento: Date(), sexo: data["sexo"] as! String, estatura: data["estatura"] as! Float, cintura: data["cintura"] as! Float, peso: data["peso"] as! Float, codigoEmparejamiento: (data["codigoEmparejamiento"] as! Double))
+                    //self.paciente.fechaNacimiento = (data["fechaNacimiento"] as! Date)
                 }
             }
             
@@ -59,9 +58,9 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func nuevaPresion(sistolica: Int, diastolica: Int, ritmo: Int){
         let db = Firestore.firestore()
-        let _ = db.collection("registroPresion").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "sistolica": sistolica, "diastolica": diastolica, "ritmo": ritmo]) { err in
-            if err == nil {
-                print("Error al postear presion")
+        let _ = db.collection("registroPresion").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "sistolica": sistolica, "diastolica": diastolica, "ritmo": ritmo]) { err in
+            if let err = err {
+                print("Error: " + err.localizedDescription)
             } else {
                 print("OK")
             }
@@ -71,21 +70,22 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func habitos(ejercicio: Int, alimentacion: Int, estadoGeneral: Int) {
         let db = Firestore.firestore()
-        let _ = db.collection("registroHabitos").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "ejercicio": ejercicio, "alimentacion": alimentacion, "satisfaccion": estadoGeneral]) { err in
-            if err == nil {
-                print("Error al postear habitos")
+        print("Firestore")
+        let _ = db.collection("registroHabitos").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "ejercicio": ejercicio, "alimentacion": alimentacion, "satisfaccion": estadoGeneral]) { err in
+            if let err = err {
+                print("Error: " + err.localizedDescription)
             } else {
                 print("OK")
             }
         }
-        //Inserta funcion para guardar en la BD
+        print("Termina")
     }
     
     func medicamentos(faltantes: Int) {
         let db = Firestore.firestore()
-        let _ = db.collection("registroMedicamentos").addDocument(data: ["idPaciente": paciente.idPaciente!, "fecha": Timestamp(date: Date()), "tomado": faltantes]) { err in
-            if err == nil {
-                print("Error al postear medicamentos")
+        let _ = db.collection("registroMedicamentos").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "tomado": faltantes]) { err in
+            if let err = err {
+                print("Error: " + err.localizedDescription)
             } else {
                 print("OK")
             }

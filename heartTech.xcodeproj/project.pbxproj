@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21DD0EDE28FDD3B100CBAEE4 /* infoPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */; };
 		21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4884628EF81340093D94D /* ViewControllerRegistro.swift */; };
 		21E4884A28EF86820093D94D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884928EF86820093D94D /* FirebaseAuth */; };
 		21E4884C28EF86820093D94D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884B28EF86820093D94D /* FirebaseFirestore */; };
 		21E4884E28EF86820093D94D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 21E4884D28EF86820093D94D /* FirebaseStorage */; };
+		FB3798F428FDF2C9003A4C8C /* infoPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */; };
+		FB3798F628FDFA93003A4C8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB3798F528FDFA93003A4C8C /* GoogleService-Info.plist */; };
 		FB627C3A28F4CAD40032DBF9 /* fichaMedicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */; };
 		FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78638228E6434D00BE213F /* lobbyViewController.swift */; };
 		FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E38428D8EB0400387699 /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		FB98E38C28D8EB0400387699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38A28D8EB0400387699 /* Main.storyboard */; };
 		FB98E38E28D8EB0600387699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38D28D8EB0600387699 /* Assets.xcassets */; };
 		FB98E39128D8EB0600387699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */; };
-		FB98E39928D8EC0E00387699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */; };
 		FB98E3A228D8FBF500387699 /* Aux.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E3A128D8FBF500387699 /* Aux.swift */; };
 		FBBC16C628F8E04B00628E01 /* menuPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */; };
 		FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */; };
@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoPaciente.swift; sourceTree = "<group>"; };
 		21E4884628EF81340093D94D /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
+		FB3798F528FDFA93003A4C8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fichaMedicaViewController.swift; sourceTree = "<group>"; };
 		FB78638228E6434D00BE213F /* lobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lobbyViewController.swift; path = ViewControllers/lobbyViewController.swift; sourceTree = "<group>"; };
 		FB98E38128D8EB0400387699 /* heartTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +48,6 @@
 		FB98E38D28D8EB0600387699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB98E39028D8EB0600387699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB98E39228D8EB0600387699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB98E3A128D8FBF500387699 /* Aux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aux.swift; sourceTree = "<group>"; };
 		FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuPopOverViewController.swift; sourceTree = "<group>"; };
 		FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomaPresion.swift; sourceTree = "<group>"; };
@@ -102,14 +102,13 @@
 				FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */,
 				FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */,
 				FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */,
-				21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */,
 				FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */,
 				FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */,
 				FB98E38628D8EB0400387699 /* SceneDelegate.swift */,
 				FB98E38A28D8EB0400387699 /* Main.storyboard */,
 				FB98E38D28D8EB0600387699 /* Assets.xcassets */,
-				FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */,
 				FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */,
+				FB3798F528FDFA93003A4C8C /* GoogleService-Info.plist */,
 				FB98E39228D8EB0600387699 /* Info.plist */,
 				FBECDE2628F8B6AC00DC4D82 /* clases */,
 			);
@@ -125,6 +124,7 @@
 				FBFE332E28FB293300B1CCC5 /* habitos.swift */,
 				FBFE333028FB298700B1CCC5 /* presion.swift */,
 				FBFE333228FB2A3400B1CCC5 /* medicamentos.swift */,
+				21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */,
 			);
 			path = clases;
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB98E39128D8EB0600387699 /* LaunchScreen.storyboard in Resources */,
-				FB98E39928D8EC0E00387699 /* GoogleService-Info.plist in Resources */,
 				FB98E38E28D8EB0600387699 /* Assets.xcassets in Resources */,
 				FB98E38C28D8EB0400387699 /* Main.storyboard in Resources */,
+				FB3798F628FDFA93003A4C8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +225,7 @@
 				FB98E3A228D8FBF500387699 /* Aux.swift in Sources */,
 				FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */,
 				FBECDE2528F8B69800DC4D82 /* paciente.swift in Sources */,
+				FB3798F428FDF2C9003A4C8C /* infoPaciente.swift in Sources */,
 				FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

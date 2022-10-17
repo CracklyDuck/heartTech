@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>966674151340-0sdububsn6kqp3br8f6hrt9git7gu042.apps.googleusercontent.com</string>
+	<string>522694331671-ahvaphg6ns0lbjcui88qt2tu8nl1sijv.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.966674151340-0sdububsn6kqp3br8f6hrt9git7gu042</string>
+	<string>com.googleusercontent.apps.522694331671-ahvaphg6ns0lbjcui88qt2tu8nl1sijv</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAcUQEKOw7cINIyKEBHfoda8ah03C8FB9s</string>
+	<string>AIzaSyCVr_u9ZBqeUSFWL3ES-CLCMbrTXbMflu8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>966674151340</string>
+	<string>522694331671</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>itesm.App07-Todo-Firebase</string>
+	<string>itesm.heartTech</string>
 	<key>PROJECT_ID</key>
-	<string>tc2007b-todo</string>
+	<string>heart-tech</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tc2007b-todo.appspot.com</string>
+	<string>heart-tech.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:966674151340:ios:a150e85b7f14cde74aac09</string>
+	<string>1:522694331671:ios:3077517989358f05363b52</string>
+	<key>DATABASE_URL</key>
+	<string>https://heart-tech-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

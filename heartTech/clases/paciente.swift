@@ -18,4 +18,17 @@ class paciente: NSObject, Codable {
     var cintura: Float!
     var peso: Float!
     var codigoEmparejamiento: Double!
+    
+    init(idPaciente: String, correo: String, contrasena: String, nombre: String, fechaNacimiento: Date, sexo: String, estatura: Float, cintura: Float, peso: Float, codigoEmparejamiento: Double!) {
+        self.idPaciente = idPaciente
+        self.correo = correo
+        self.contrasena = contrasena
+        self.nombre = nombre
+        self.fechaNacimiento = fechaNacimiento
+        self.sexo = sexo
+        self.estatura = estatura
+        self.cintura = cintura
+        self.peso = peso
+        self.codigoEmparejamiento = codigoEmparejamiento
+    }
 }

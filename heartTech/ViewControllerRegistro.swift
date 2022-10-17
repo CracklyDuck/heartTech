@@ -58,7 +58,7 @@ class ViewControllerRegistro: UIViewController {
         
     
         let yearInt = Int(tfRegYear.text!) ?? 0
-            if yearInt > 2022{
+            if yearInt > 2022 || yearInt < 1900 {
                 let alerta = UIAlertController(title: "Error", message: "Fecha de nacimiento inválida.", preferredStyle: .alert)
                 let accion = UIAlertAction(title: "OK", style: .cancel)
                 alerta.addAction(accion)

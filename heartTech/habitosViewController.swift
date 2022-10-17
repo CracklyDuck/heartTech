@@ -25,6 +25,11 @@ class habitosViewController: UIViewController {
         self.dismiss(animated: true)
     }
   
+    @IBAction func guardar(_ sender: Any) {
+        let vistaIni = presentingViewController as! lobbyViewController
+        vistaIni.habitos(ejercicio: Int(sEjercicio.value), alimentacion: Int(sAlimentacion.value), estadoGeneral: Int(sEjercicio.value))
+        dismiss(animated: true)
+    }
     /*
     @IBAction func guardarPresion(_ sender: UIButton) {
         let vistaIni = presentingViewController as! lobbyViewController

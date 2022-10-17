@@ -30,7 +30,7 @@ class tomaPresion: UIViewController {
     @IBAction func regresar(_ sender: UIButton) {
         
         if ((tfSistolica1.text! != "") || (tfDiastolica1.text! != "") || (tfRitmo1.text! != "")) {
-            let alerta = UIAlertController(title: "Advertencia", message: "Salir sin guardar la información?", preferredStyle: .alert)
+            let alerta = UIAlertController(title: "Advertencia", message: "¿Salir sin guardar la información?", preferredStyle: .alert)
             let accion = UIAlertAction(title: "Sí", style: .cancel) {action in
                 self.dismiss(animated: true)
             }
@@ -78,7 +78,7 @@ class tomaPresion: UIViewController {
                         promedioDias = promedioDias / 3
                         promedioRitm = promedioRitm / 3
                         let vistaIni = presentingViewController as! lobbyViewController
-                        //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                        vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
                         print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
                         dismiss(animated: true)
                     } else if(tfSistolica3.text! != "" || tfDiastolica3.text! != "" || tfRitmo3.text! != ""){
@@ -91,7 +91,7 @@ class tomaPresion: UIViewController {
                         promedioDias = promedioDias / 2
                         promedioRitm = promedioRitm / 2
                         let vistaIni = presentingViewController as! lobbyViewController
-                        //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                        vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
                         print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
                         dismiss(animated: true)
                     }
@@ -102,7 +102,7 @@ class tomaPresion: UIViewController {
                     present(alerta, animated: true)
                 } else {
                     let vistaIni = presentingViewController as! lobbyViewController
-                    //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                    vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
                     print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
                     dismiss(animated: true)
                 }
@@ -110,6 +110,11 @@ class tomaPresion: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func quitaTeclado(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     /*
     // MARK: - Navigation
