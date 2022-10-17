@@ -22,9 +22,16 @@
 		FB98E39128D8EB0600387699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */; };
 		FB98E39928D8EC0E00387699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */; };
 		FB98E3A228D8FBF500387699 /* Aux.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98E3A128D8FBF500387699 /* Aux.swift */; };
+		FBBC16C628F8E04B00628E01 /* menuPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */; };
 		FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */; };
 		FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */; };
 		FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */; };
+		FBECDE2528F8B69800DC4D82 /* paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDE2428F8B69800DC4D82 /* paciente.swift */; };
+		FBFE332B28FB272A00B1CCC5 /* listaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE332A28FB272A00B1CCC5 /* listaPacientes.swift */; };
+		FBFE332D28FB28B200B1CCC5 /* doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE332C28FB28B200B1CCC5 /* doctor.swift */; };
+		FBFE332F28FB293300B1CCC5 /* habitos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE332E28FB293300B1CCC5 /* habitos.swift */; };
+		FBFE333128FB298700B1CCC5 /* presion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE333028FB298700B1CCC5 /* presion.swift */; };
+		FBFE333328FB2A3400B1CCC5 /* medicamentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE333228FB2A3400B1CCC5 /* medicamentos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +49,16 @@
 		FB98E39228D8EB0600387699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB98E3A128D8FBF500387699 /* Aux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aux.swift; sourceTree = "<group>"; };
+		FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuPopOverViewController.swift; sourceTree = "<group>"; };
 		FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomaPresion.swift; sourceTree = "<group>"; };
 		FBDDEC5C28EE5DB700233FAB /* habitosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitosViewController.swift; sourceTree = "<group>"; };
 		FBDDEC5E28EE5DCE00233FAB /* medicamentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicamentosViewController.swift; sourceTree = "<group>"; };
+		FBECDE2428F8B69800DC4D82 /* paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paciente.swift; sourceTree = "<group>"; };
+		FBFE332A28FB272A00B1CCC5 /* listaPacientes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listaPacientes.swift; sourceTree = "<group>"; };
+		FBFE332C28FB28B200B1CCC5 /* doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctor.swift; sourceTree = "<group>"; };
+		FBFE332E28FB293300B1CCC5 /* habitos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitos.swift; sourceTree = "<group>"; };
+		FBFE333028FB298700B1CCC5 /* presion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presion.swift; sourceTree = "<group>"; };
+		FBFE333228FB2A3400B1CCC5 /* medicamentos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicamentos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,7 @@
 				FB98E38828D8EB0400387699 /* ViewController.swift */,
 				21E4884628EF81340093D94D /* ViewControllerRegistro.swift */,
 				FB78638228E6434D00BE213F /* lobbyViewController.swift */,
+				FBBC16C528F8E04B00628E01 /* menuPopOverViewController.swift */,
 				FB627C3928F4CAD40032DBF9 /* fichaMedicaViewController.swift */,
 				FBDDEC5A28EE5CE100233FAB /* tomaPresion.swift */,
 				21DD0EDD28FDD3B100CBAEE4 /* infoPaciente.swift */,
@@ -96,8 +111,22 @@
 				FB98E39828D8EC0E00387699 /* GoogleService-Info.plist */,
 				FB98E38F28D8EB0600387699 /* LaunchScreen.storyboard */,
 				FB98E39228D8EB0600387699 /* Info.plist */,
+				FBECDE2628F8B6AC00DC4D82 /* clases */,
 			);
 			path = heartTech;
+			sourceTree = "<group>";
+		};
+		FBECDE2628F8B6AC00DC4D82 /* clases */ = {
+			isa = PBXGroup;
+			children = (
+				FBECDE2428F8B69800DC4D82 /* paciente.swift */,
+				FBFE332A28FB272A00B1CCC5 /* listaPacientes.swift */,
+				FBFE332C28FB28B200B1CCC5 /* doctor.swift */,
+				FBFE332E28FB293300B1CCC5 /* habitos.swift */,
+				FBFE333028FB298700B1CCC5 /* presion.swift */,
+				FBFE333228FB2A3400B1CCC5 /* medicamentos.swift */,
+			);
+			path = clases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,16 +209,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFE332D28FB28B200B1CCC5 /* doctor.swift in Sources */,
 				FB98E38928D8EB0400387699 /* ViewController.swift in Sources */,
+				FBFE333328FB2A3400B1CCC5 /* medicamentos.swift in Sources */,
+				FBBC16C628F8E04B00628E01 /* menuPopOverViewController.swift in Sources */,
+				FBFE332B28FB272A00B1CCC5 /* listaPacientes.swift in Sources */,
 				FB627C3A28F4CAD40032DBF9 /* fichaMedicaViewController.swift in Sources */,
 				21E4884728EF81340093D94D /* ViewControllerRegistro.swift in Sources */,
 				FBDDEC5B28EE5CE100233FAB /* tomaPresion.swift in Sources */,
 				FB98E38528D8EB0400387699 /* AppDelegate.swift in Sources */,
+				FBFE333128FB298700B1CCC5 /* presion.swift in Sources */,
+				FBFE332F28FB293300B1CCC5 /* habitos.swift in Sources */,
 				FB78638328E6434D00BE213F /* lobbyViewController.swift in Sources */,
 				FBDDEC5D28EE5DB700233FAB /* habitosViewController.swift in Sources */,
 				FB98E3A228D8FBF500387699 /* Aux.swift in Sources */,
 				FBDDEC5F28EE5DCE00233FAB /* medicamentosViewController.swift in Sources */,
-				21DD0EDE28FDD3B100CBAEE4 /* infoPaciente.swift in Sources */,
+				FBECDE2528F8B69800DC4D82 /* paciente.swift in Sources */,
 				FB98E38728D8EB0400387699 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +377,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -370,6 +406,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
