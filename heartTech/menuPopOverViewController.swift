@@ -16,12 +16,13 @@ class menuPopOverViewController: UIViewController {
         
         super.viewDidLoad()
         
-        preferredContentSize = CGSize(width: 200, height: 500)
+        preferredContentSize = CGSize(width: 200, height: 200)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func cerrarSesión(_ sender: Any) {
-        let lobby = presentingViewController
+        let view = presentingViewController
+        let lobby = view?.presentingViewController
         lobby?.dismiss(animated: true)
     }
     

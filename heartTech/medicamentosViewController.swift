@@ -8,8 +8,18 @@
 import UIKit
 
 class medicamentosViewController: UIViewController {
+    
+    var numero = 0
+    
+    @IBOutlet weak var lbNumero: UILabel!
+    @IBOutlet weak var btUp: UIButton!
+    @IBOutlet weak var btDown: UIButton!
+    
+    
+    
 
     override func viewDidLoad() {
+        lbNumero.text = String(numero)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -18,6 +28,27 @@ class medicamentosViewController: UIViewController {
     @IBAction func regresar(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
+    
+    @IBAction func subir(_ sender: Any) {
+        if (numero < 10) {
+            numero = numero + 1
+            lbNumero.text = String(numero)
+        }
+    }
+    
+    @IBAction func bajar(_ sender: Any) {
+        if (numero > 0) {
+            numero = numero - 1
+            lbNumero.text = String(numero)
+        }
+    }
+    
+    @IBAction func guardar(_ sender: Any) {
+        
+    }
+    
+    
+    
     
     /*
     @IBAction func guardarPresion(_ sender: UIButton) {

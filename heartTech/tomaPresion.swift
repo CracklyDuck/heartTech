@@ -51,17 +51,13 @@ class tomaPresion: UIViewController {
         
         if (tfSistolica1.text! == "" && tfDiastolica1.text! == "" && tfRitmo1.text! == "") {
             let alerta = UIAlertController(title: "Error", message: "Llena al menos una medida de toma de presion", preferredStyle: .alert)
-            let accion = UIAlertAction(title: "OK", style: .cancel) {action in
-                self.dismiss(animated: true)
-            }
+            let accion = UIAlertAction(title: "OK", style: .cancel)
             alerta.addAction(accion)
             present(alerta, animated: true)
         } else {
             if (tfSistolica1.text! == "" || tfDiastolica1.text! == "" || tfRitmo1.text! == "") {
                 let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 1", preferredStyle: .alert)
-                let accion = UIAlertAction(title: "OK", style: .cancel) {action in
-                    self.dismiss(animated: true)
-                }
+                let accion = UIAlertAction(title: "OK", style: .cancel)
                 alerta.addAction(accion)
                 present(alerta, animated: true)
             } else {
@@ -81,31 +77,36 @@ class tomaPresion: UIViewController {
                         promedioSist = promedioSist / 3
                         promedioDias = promedioDias / 3
                         promedioRitm = promedioRitm / 3
+                        let vistaIni = presentingViewController as! lobbyViewController
+                        //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                        print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
+                        dismiss(animated: true)
                     } else if(tfSistolica3.text! != "" || tfDiastolica3.text! != "" || tfRitmo3.text! != ""){
                         let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 3", preferredStyle: .alert)
-                        let accion = UIAlertAction(title: "OK", style: .cancel) {action in
-                            self.dismiss(animated: true)
-                        }
+                        let accion = UIAlertAction(title: "OK", style: .cancel)
                         alerta.addAction(accion)
                         present(alerta, animated: true)
                     } else {
                         promedioSist = promedioSist / 2
                         promedioDias = promedioDias / 2
                         promedioRitm = promedioRitm / 2
+                        let vistaIni = presentingViewController as! lobbyViewController
+                        //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                        print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
+                        dismiss(animated: true)
                     }
                 } else if(tfSistolica2.text! != "" || tfDiastolica2.text! != "" || tfRitmo2.text! != ""){
                     let alerta = UIAlertController(title: "Error", message: "Campos faltantes en la medida 2", preferredStyle: .alert)
-                    let accion = UIAlertAction(title: "OK", style: .cancel) {action in
-                        self.dismiss(animated: true)
-                    }
+                    let accion = UIAlertAction(title: "OK", style: .cancel)
                     alerta.addAction(accion)
                     present(alerta, animated: true)
+                } else {
+                    let vistaIni = presentingViewController as! lobbyViewController
+                    //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
+                    print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
+                    dismiss(animated: true)
                 }
             }
-            let vistaIni = presentingViewController as! lobbyViewController
-            //vistaIni.nuevaPresion(sistolica: promedioSist, diastolica: promedioDias, ritmo: promedioRitm)
-            print("Promedio Sistolica: " + String(promedioSist) + " Promedio Diastolica: " + String(promedioDias) + " Promedio Ritmo: " + String(promedioRitm))
-            //dismiss(animated: true)
         }
     }
     
