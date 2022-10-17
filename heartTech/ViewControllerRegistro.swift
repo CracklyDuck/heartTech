@@ -21,8 +21,11 @@ class ViewControllerRegistro: UIViewController {
     @IBOutlet weak var tfRegAltura: UITextField!
     @IBOutlet weak var tfRegAncho: UITextField!
     
+    var regNombre : String!
+    
     
     override func viewDidLoad() {
+        tfRegNombre.text = regNombre
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -35,6 +38,7 @@ class ViewControllerRegistro: UIViewController {
     
     
     @IBAction func registrarse(_ sender: Any) {
+        
         
         if tfRegNombre.text == "" || tfRegMes.text == "" || tfRegDia.text == "" || tfRegYear.text == "" || tfRegCorreo.text == "" || tfRegPassword.text == "" || tfRegConfPassword.text == "" {
             let alerta = UIAlertController(title: "Error", message: "No se pueden guardar los cambios porque hay campos vacíos.", preferredStyle: .alert)
@@ -52,7 +56,20 @@ class ViewControllerRegistro: UIViewController {
             present(alerta, animated: true)
         }
         
+    
+        let yearInt = Int(tfRegYear.text!) ?? 0
+            if yearInt > 2022{
+                let alerta = UIAlertController(title: "Error", message: "Fecha de nacimiento inválida.", preferredStyle: .alert)
+                let accion = UIAlertAction(title: "OK", style: .cancel)
+                alerta.addAction(accion)
+                present(alerta, animated: true)
+            }
+        
         else {
+            //let alerta = UIAlertController(title: "Usuario registrado", message: "La información se ha guardado con éxito.", preferredStyle: .alert)
+            //let accion = UIAlertAction(title: "OK", style: .cancel)
+            //alerta.addAction(accion)
+            //present(alerta, animated: true)
             self.dismiss(animated: true, completion: nil)
             //let alerta = UIAlertController(title: "Privacidad", message: "Al registrarse, acepta los términos y codiciones de esta aplicación.", preferredStyle: .alert)
             //let accion = UIAlertAction(title: "OK", style: .cancel)
@@ -63,6 +80,14 @@ class ViewControllerRegistro: UIViewController {
     }
     
     
+    
+    @IBAction func quitaTeclado(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    func actualizaInt(mensajeRegresado : String){
+        tfRegNombre.text = mensajeRegresado
+    }
     
 
     /*

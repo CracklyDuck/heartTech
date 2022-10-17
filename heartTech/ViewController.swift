@@ -25,10 +25,12 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vistaRegistro"{
-            let vistaRegistro = segue.destination as! ViewControllerRegistro
         }
     }
     
+    @IBAction func verCreditos(_ sender: UIButton) {
+        
+    }
     
 }
 

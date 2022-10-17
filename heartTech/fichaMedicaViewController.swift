@@ -7,7 +7,7 @@
 
 import UIKit
 
-class fichaMedicaViewController: UIViewController {
+class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var tfNombre: UITextField!
     @IBOutlet weak var tfDia: UITextField!
@@ -18,31 +18,57 @@ class fichaMedicaViewController: UIViewController {
     @IBOutlet weak var tfCintura: UITextField!
     @IBOutlet weak var btGuardar: UIButton!
     
-    var nombreEscrito : String!
-    var diaEscrito : String!
-    var mesEscrito : String!
-    var yearEscrito : String!
-    var pesoEscrito : String!
-    var alturaEscrito : String!
-    var cinturaEscrito : String!
+    var listaInfo = [infoPaciente]()
+    var defaults = UserDefaults.standard
+
     
+    
+    var regNombre : String!
     
     override func viewDidLoad() {
+        
+        //let vistaIni = presentingViewController as! ViewControllerRegistro
+        //vistaIni.actualizaInt(mensajeRegresado: tfNombre.text!)
+        
         super.viewDidLoad()
         
-        /*
-        tfNombre.text = nombreEscrito
-        tfDia.text = diaEscrito
-        tfMes.text = mesEscrito
-        tfYear.text = yearEscrito
-        tfPeso.text = pesoEscrito
-        tfAltura.text = alturaEscrito
-        tfCintura.text = cinturaEscrito
-        actualizaInterfaz(nomIngresado: tfNombre.text!, diaIngresado: tfDia.text!, mesIngresado: tfMes.text!, yearIngresado: tfYear.text!, pesoIngresado: tfPeso.text!, alturaIngresado: tfAltura.text!, cinturaIngresado: tfCintura.text!)
-         */
-         
-        // Do any additional setup after loading the view.
+        let app = UIApplication.shared
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(guardarInfo), name: UIApplication.didEnterBackgroundNotification, object: app)
+        if FileManager.default.fileExists(atPath: dataFilePath().path){
+            obtenerInfo()
+        }
     }
+    
+    
+    func dataFilePath() -> URL {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let pathArchivo = documentsDirectory.appendingPathComponent("Info").appendingPathExtension("plist")
+        
+        return pathArchivo
+    }
+    
+    @IBAction func guardarInfo(){
+        do {
+            let data = try PropertyListEncoder().encode(listaInfo)
+            try data.write(to: dataFilePath())
+        }
+        catch{
+            print("Error al guardar")
+        }
+    }
+    
+    func obtenerInfo(){
+        listaInfo.removeAll()
+        do {
+            let data = try Data.init(contentsOf: dataFilePath())
+            listaInfo = try PropertyListDecoder().decode([infoPaciente].self, from: data)
+        }
+        catch{
+            print("Error al leer los datos")
+        }
+    }
+    
     
     @IBAction func regresarMenu(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -71,18 +97,37 @@ class fichaMedicaViewController: UIViewController {
             alerta.addAction(accion)
             present(alerta, animated: true)
         }
+        if tfPeso.text == "1"{
+            let alerta = UIAlertController(title: "Datos no guardados", message: "Datos ingresados incorrectamente.", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel)
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        }
         else {
             //Que se quite al guardar ????
+            
+            //let alerta = UIAlertController(title: "Información registrada", message: "Los cambios se han guardado con éxito.", preferredStyle: .alert)
+            //let accion = UIAlertAction(title: "OK", style: .cancel)
+            //alerta.addAction(accion)
+            //present(alerta, animated: true)
             self.dismiss(animated: true, completion: nil)
+            
+
+            
             /*
             let vistaIni = presentingViewController as! fichaMedicaViewController
             vistaIni.actualizaInterfaz(nomIngresado: tfNombre.text!, diaIngresado: tfDia.text!, mesIngresado: tfMes.text!, yearIngresado: tfYear.text!, pesoIngresado: tfPeso.text!, alturaIngresado: tfAltura.text!, cinturaIngresado: tfCintura.text!)
              */
-            dismiss(animated: true)
+            //dismiss(animated: true)
             
         }
+        
     }
-
+    
+    
+    @IBAction func quitaTeclado(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
 
     /*
