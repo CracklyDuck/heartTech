@@ -38,7 +38,6 @@ class medicamentosViewController: UIViewController {
         } else {
             dismiss(animated: true)
         }
-        self.dismiss(animated: true)
     }
     
     @IBAction func subir(_ sender: Any) {

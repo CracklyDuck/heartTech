@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class menuPopOverViewController: UIViewController {
     
@@ -23,7 +24,19 @@ class menuPopOverViewController: UIViewController {
     @IBAction func cerrarSesión(_ sender: Any) {
         let view = presentingViewController
         let lobby = view?.presentingViewController
-        lobby?.dismiss(animated: true)
+        if(logOut()) {
+            lobby?.dismiss(animated: true)
+        }
+    }
+    
+    func logOut() -> Bool {
+        do {
+            try Auth.auth().signOut()
+            return true
+        } catch {
+            print("Error al cerrar sesión")
+        }
+        return false
     }
     
     /*

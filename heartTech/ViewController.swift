@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var imgIniciarSesion: UIImageView!
+    
+    @IBOutlet weak var tfUsuario: UITextField!
+    
+    @IBOutlet weak var tfContrasena: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,10 +29,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btIniciarSesion(_ sender: Any) {
+        if let correo = tfUsuario.text,
+           let contra = tfContrasena.text {
+            login(email: correo, pass: contra)
+            performSegue(withIdentifier: "lobby", sender: nil)
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "vistaRegistro"{
+        if segue.identifier == "lobby"{
+            let lobby = segue.destination as! lobbyViewController
+            lobby.email = Auth.auth().currentUser?.email
         }
     }
     
@@ -36,6 +53,17 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func login(email: String, pass: String) {
+        Auth.auth().signIn(withEmail: email, password: pass) {
+            (user, error) in
+            if let error = error {
+                print("Error: " + error.localizedDescription)
+                //return false
+            } else {
+                //self.presentingViewController?.performSegue(withIdentifier: "lobby", sender: nil)
+            }
+        }
+    }
     
 }
 

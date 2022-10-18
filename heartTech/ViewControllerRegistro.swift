@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewControllerRegistro: UIViewController {
 
@@ -33,50 +34,40 @@ class ViewControllerRegistro: UIViewController {
     
     
     @IBAction func atras(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true)
     }
     
     
     @IBAction func registrarse(_ sender: Any) {
-        
-        
-        if tfRegNombre.text == "" || tfRegMes.text == "" || tfRegDia.text == "" || tfRegYear.text == "" || tfRegCorreo.text == "" || tfRegPassword.text == "" || tfRegConfPassword.text == "" {
-            let alerta = UIAlertController(title: "Error", message: "No se pueden guardar los cambios porque hay campos vacíos.", preferredStyle: .alert)
+        if (tfRegNombre.text == "" || tfRegMes.text == "" || tfRegDia.text == "" || tfRegYear.text == "" || tfRegCorreo.text == "" || tfRegPassword.text == "" || tfRegConfPassword.text == "") {
+            let alerta = UIAlertController(title: "Error", message: "Llena todos los campos para poder registrarse.", preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel)
             alerta.addAction(accion)
             present(alerta, animated: true)
-        }
-        
-        else if let checarPass1 = tfRegPassword.text,
+        } else if let checarPass1 = tfRegPassword.text,
                 let checarPass2 = tfRegConfPassword.text,
                 checarPass1 != checarPass2 {
             let alerta = UIAlertController(title: "Error", message: "Las contraseñas ingresadas no coinciden.", preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel)
             alerta.addAction(accion)
             present(alerta, animated: true)
-        }
-        
-    
-        let yearInt = Int(tfRegYear.text!) ?? 0
-            if yearInt > 2022 || yearInt < 1900 {
-                let alerta = UIAlertController(title: "Error", message: "Fecha de nacimiento inválida.", preferredStyle: .alert)
-                let accion = UIAlertAction(title: "OK", style: .cancel)
-                alerta.addAction(accion)
-                present(alerta, animated: true)
-            }
-        
-        else {
+        } else if (Int(tfRegYear.text!)! > 2022 || Int(tfRegYear.text!)! < 1900) {
+            let alerta = UIAlertController(title: "Error", message: "Fecha de nacimiento inválida.", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel)
+            alerta.addAction(accion)
+            present(alerta, animated: true)
+        } else {
             //let alerta = UIAlertController(title: "Usuario registrado", message: "La información se ha guardado con éxito.", preferredStyle: .alert)
             //let accion = UIAlertAction(title: "OK", style: .cancel)
             //alerta.addAction(accion)
             //present(alerta, animated: true)
-            self.dismiss(animated: true, completion: nil)
+            createUser(email: tfRegCorreo.text!, pass: tfRegPassword.text!)
+            self.dismiss(animated: true)
             //let alerta = UIAlertController(title: "Privacidad", message: "Al registrarse, acepta los términos y codiciones de esta aplicación.", preferredStyle: .alert)
             //let accion = UIAlertAction(title: "OK", style: .cancel)
             //alerta.addAction(accion)
             //present(alerta, animated: true)
         }
-
     }
     
     
@@ -87,6 +78,17 @@ class ViewControllerRegistro: UIViewController {
     
     func actualizaInt(mensajeRegresado : String){
         tfRegNombre.text = mensajeRegresado
+    }
+    
+    func createUser(email: String, pass: String) {
+        Auth.auth().createUser(withEmail: email, password: pass) {
+            (user, error) in
+            if let error = error {
+                print("Error: " + error.localizedDescription)
+            } else {
+                print("OK")
+            }
+        }
     }
     
 

@@ -9,11 +9,12 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseCore
+import FirebaseAuth
 
 class lobbyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     
-    let correo = "trejo.fabian@hotmail.com"
+    var email = Auth.auth().currentUser?.email
     
     var paciente1: paciente!
 
@@ -41,13 +42,13 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func getPaciente() {
         let db = Firestore.firestore()
-        db.collection("paciente").whereField("idPaciente", isEqualTo: correo).getDocuments(){ [self] (QuerySnapshot, err) in
+        db.collection("paciente").whereField("idPaciente", isEqualTo: email).getDocuments(){ [self] (QuerySnapshot, err) in
             if let err = err {
                 print("Error al conseguir documentos: \(err)")
             } else {
                 for document in QuerySnapshot!.documents {
                     let data = document.data()
-                    paciente1 = paciente(idPaciente: self.correo, correo: correo, contrasena: data["contrasena"] as! String, nombre: data["nombre"] as! String, fechaNacimiento: Date(), sexo: data["sexo"] as! String, estatura: data["estatura"] as! Float, cintura: data["cintura"] as! Float, peso: data["peso"] as! Float, codigoEmparejamiento: (data["codigoEmparejamiento"] as! Double))
+                    paciente1 = paciente(idPaciente: data["idPaciente"] as! String, correo: data["correo"] as! String, contrasena: data["contrasena"] as! String, nombre: data["nombre"] as! String, fechaNacimiento: Date(), sexo: data["sexo"] as! String, estatura: data["estatura"] as! Float, cintura: data["cintura"] as! Float, peso: data["peso"] as! Float, codigoEmparejamiento: (data["codigoEmparejamiento"] as! Double))
                     //self.paciente.fechaNacimiento = (data["fechaNacimiento"] as! Date)
                 }
             }
@@ -58,7 +59,7 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func nuevaPresion(sistolica: Int, diastolica: Int, ritmo: Int){
         let db = Firestore.firestore()
-        let _ = db.collection("registroPresion").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "sistolica": sistolica, "diastolica": diastolica, "ritmo": ritmo]) { err in
+        let _ = db.collection("registroPresion").addDocument(data: ["idPaciente": email as Any, "fecha": Timestamp(date: Date()), "sistolica": sistolica, "diastolica": diastolica, "ritmo": ritmo]) { err in
             if let err = err {
                 print("Error: " + err.localizedDescription)
             } else {
@@ -71,19 +72,18 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
     func habitos(ejercicio: Int, alimentacion: Int, estadoGeneral: Int) {
         let db = Firestore.firestore()
         print("Firestore")
-        let _ = db.collection("registroHabitos").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "ejercicio": ejercicio, "alimentacion": alimentacion, "satisfaccion": estadoGeneral]) { err in
+        let _ = db.collection("registroHabitos").addDocument(data: ["idPaciente": email as Any, "fecha": Timestamp(date: Date()), "ejercicio": ejercicio, "alimentacion": alimentacion, "satisfaccion": estadoGeneral]) { err in
             if let err = err {
                 print("Error: " + err.localizedDescription)
             } else {
                 print("OK")
             }
         }
-        print("Termina")
     }
     
     func medicamentos(faltantes: Int) {
         let db = Firestore.firestore()
-        let _ = db.collection("registroMedicamentos").addDocument(data: ["idPaciente": correo, "fecha": Timestamp(date: Date()), "tomado": faltantes]) { err in
+        let _ = db.collection("registroMedicamentos").addDocument(data: ["idPaciente": email as Any, "fecha": Timestamp(date: Date()), "tomado": faltantes]) { err in
             if let err = err {
                 print("Error: " + err.localizedDescription)
             } else {
