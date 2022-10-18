@@ -459,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bq3-8T-8gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309.81308411214951" y="-501.51187904967605"/>
+            <point key="canvasLocation" x="223" y="-502"/>
         </scene>
         <!--Menu Pop Over View Controller-->
         <scene sceneID="QwN-bO-QFp">
@@ -513,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PS3-ZM-LgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="-502.84857571214394"/>
+            <point key="canvasLocation" x="929" y="-502"/>
         </scene>
         <!--Toma Presion-->
         <scene sceneID="Ipq-Ut-Dy7">
@@ -587,7 +587,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-ZC-Coh">
                                         <rect key="frame" x="269.33333333333331" y="0.0" width="122.66666666666669" height="265"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ritmo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="One-sf-H2I">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="One-sf-H2I">
                                                 <rect key="frame" x="0.0" y="0.0" width="122.66666666666667" height="34"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -1292,7 +1292,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="-1210.344827586207"/>
+            <point key="canvasLocation" x="1557" y="-502"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nfu-xT-Yu2">
@@ -1307,7 +1307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRS-6F-h9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1738" y="267"/>
+            <point key="canvasLocation" x="223" y="-1186"/>
         </scene>
     </scenes>
     <resources>

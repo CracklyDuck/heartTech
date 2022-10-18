@@ -101,7 +101,7 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
         if (segue.identifier == "menuPopOver") {
             let menu = segue.destination as! menuPopOverViewController
             menu.popoverPresentationController?.delegate = self
-            menu.height = view.frame.size.height
+            menu.paciente1 = paciente1
             //menu.edge = topBar.UIRectEdge
         }
     }

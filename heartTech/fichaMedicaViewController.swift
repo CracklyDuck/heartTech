@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     
@@ -20,12 +21,23 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     
     var listaInfo = [paciente]()
     var defaults = UserDefaults.standard
+    
+    var paciente2: paciente!
+    
+    var nombre: String!
+    var peso: String!
+    var altura: String!
+    var cintura: String!
 
     
     
     var regNombre : String!
     
     override func viewDidLoad() {
+        tfNombre.text = nombre
+        tfPeso.text = peso
+        tfAltura.text = altura
+        tfCintura.text = cintura
         
         //let vistaIni = presentingViewController as! ViewControllerRegistro
         //vistaIni.actualizaInt(mensajeRegresado: tfNombre.text!)
