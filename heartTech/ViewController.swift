@@ -11,9 +11,7 @@ import FirebaseAuth
 class ViewController: UIViewController {
     
     @IBOutlet weak var imgIniciarSesion: UIImageView!
-    
     @IBOutlet weak var tfUsuario: UITextField!
-    
     @IBOutlet weak var tfContrasena: UITextField!
     
     
@@ -23,8 +21,6 @@ class ViewController: UIViewController {
         
         //intento de hacer circular la imagen, fallido  !!!!!!!
         //Borrar lo de abajo
-        imgIniciarSesion.layer.masksToBounds = true
-        imgIniciarSesion.layer.cornerRadius = imgIniciarSesion.bounds.width / 2
         
         // Do any additional setup after loading the view.
     }
@@ -33,20 +29,7 @@ class ViewController: UIViewController {
         if let correo = tfUsuario.text,
            let contra = tfContrasena.text {
             login(email: correo, pass: contra)
-            performSegue(withIdentifier: "lobby", sender: nil)
         }
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "lobby"{
-            let lobby = segue.destination as! lobbyViewController
-            lobby.email = Auth.auth().currentUser?.email
-        }
-    }
-    
-    @IBAction func verCreditos(_ sender: UIButton) {
-        
     }
     
     @IBAction func quitaTeclado(_ sender: UITapGestureRecognizer) {
@@ -60,7 +43,7 @@ class ViewController: UIViewController {
                 print("Error: " + error.localizedDescription)
                 //return false
             } else {
-                //self.presentingViewController?.performSegue(withIdentifier: "lobby", sender: nil)
+                self.performSegue(withIdentifier: "lobby", sender: nil)
             }
         }
     }

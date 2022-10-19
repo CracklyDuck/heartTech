@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class fichaMedicaViewController: UIViewController, UITextViewDelegate {
@@ -19,36 +20,47 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var tfCintura: UITextField!
     @IBOutlet weak var btGuardar: UIButton!
     
-    var listaInfo = [paciente]()
-    var defaults = UserDefaults.standard
-    
-    var paciente2: paciente!
-    
     var nombre: String!
-    var peso: String!
-    var altura: String!
-    var cintura: String!
+    var peso: Float!
+    var altura: Float!
+    var cintura: Float!
 
+    var email: String!
     
+    var ident: String!
     
-    var regNombre : String!
+    var data1: [String: Any]!
     
     override func viewDidLoad() {
-        tfNombre.text = nombre
-        tfPeso.text = peso
-        tfAltura.text = altura
-        tfCintura.text = cintura
+        if let curr = Auth.auth().currentUser {
+            email = curr.email
+            getPaciente()
+        }
+        
         
         //let vistaIni = presentingViewController as! ViewControllerRegistro
         //vistaIni.actualizaInt(mensajeRegresado: tfNombre.text!)
         
         super.viewDidLoad()
-        
-        let app = UIApplication.shared
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(guardarInfo), name: UIApplication.didEnterBackgroundNotification, object: app)
-        if FileManager.default.fileExists(atPath: dataFilePath().path){
-            obtenerInfo()
+    }
+    
+    func getPaciente(){
+        let db = Firestore.firestore()
+        db.collection("paciente").whereField("idPaciente", isEqualTo: email).getDocuments(){ (QuerySnapshot, err) in
+            if let err = err {
+                print("Error al conseguir documentos: \(err)")
+            } else {
+                for document in QuerySnapshot!.documents {
+                    let data = document.data()
+                    self.data1 = data
+                    print(data["nombre"] as! String)
+                    self.tfNombre.text = (data["nombre"] as! String)
+                    self.tfPeso.text = String(data["peso"] as! Float)
+                    self.tfAltura.text = String(data["estatura"] as! Float)
+                    self.tfCintura.text = String(data["cintura"] as! Float)
+                    self.ident = document.documentID
+                }
+            }
         }
     }
     
@@ -58,27 +70,6 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
         let pathArchivo = documentsDirectory.appendingPathComponent("Info").appendingPathExtension("plist")
         
         return pathArchivo
-    }
-    
-    @IBAction func guardarInfo(){
-        do {
-            let data = try PropertyListEncoder().encode(listaInfo)
-            try data.write(to: dataFilePath())
-        }
-        catch{
-            print("Error al guardar")
-        }
-    }
-    
-    func obtenerInfo(){
-        listaInfo.removeAll()
-        do {
-            let data = try Data.init(contentsOf: dataFilePath())
-            listaInfo = try PropertyListDecoder().decode([paciente].self, from: data)
-        }
-        catch{
-            print("Error al leer los datos")
-        }
     }
     
     
@@ -97,43 +88,21 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func btGuardarCambios(_ sender: UIButton) {
-        //if let nombre = tfNombre.text, !nombre.isEmpty{
-        //let nombre = tfNombre.text
-        //if ((nombre?.isEmpty) != nil){
-        if tfNombre.text == "" || tfMes.text == "" || tfDia.text == "" || tfYear.text == ""{
-           //let dia = tfDia.text, !dia.isEmpty,
-           //let mes = tfMes.text, !mes.isEmpty,
-           //let year = tfYear.text, !year.isEmpty {
-            let alerta = UIAlertController(title: "Error", message: "No se pueden guardar los cambios porque hay campos vacíos.", preferredStyle: .alert)
+        if (tfNombre.text == "" || tfPeso.text == "" || tfAltura.text == "" || tfCintura.text == "") {
+            let alerta = UIAlertController(title: "Error", message: "No se pueden guardar los cambios porque los datos no están completos", preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel)
             alerta.addAction(accion)
             present(alerta, animated: true)
-        }
-        if tfPeso.text == "1"{
+        } else if tfPeso.text == "1"{
             let alerta = UIAlertController(title: "Datos no guardados", message: "Datos ingresados incorrectamente.", preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel)
             alerta.addAction(accion)
             present(alerta, animated: true)
         }
         else {
-            //Que se quite al guardar ????
-            
-            //let alerta = UIAlertController(title: "Información registrada", message: "Los cambios se han guardado con éxito.", preferredStyle: .alert)
-            //let accion = UIAlertAction(title: "OK", style: .cancel)
-            //alerta.addAction(accion)
-            //present(alerta, animated: true)
+            updateData(nombre: tfNombre.text!, peso: Float(tfPeso.text!)!, altura: Float(tfAltura.text!)!, cintura: Float(tfCintura.text!)!)
             self.dismiss(animated: true, completion: nil)
-            
-
-            
-            /*
-            let vistaIni = presentingViewController as! fichaMedicaViewController
-            vistaIni.actualizaInterfaz(nomIngresado: tfNombre.text!, diaIngresado: tfDia.text!, mesIngresado: tfMes.text!, yearIngresado: tfYear.text!, pesoIngresado: tfPeso.text!, alturaIngresado: tfAltura.text!, cinturaIngresado: tfCintura.text!)
-             */
-            //dismiss(animated: true)
-            
         }
-        
     }
     
     
@@ -141,6 +110,21 @@ class fichaMedicaViewController: UIViewController, UITextViewDelegate {
         view.endEditing(true)
     }
     
+    
+    func updateData(nombre: String, peso: Float, altura: Float, cintura: Float) {
+        let db = Firestore.firestore()
+        self.data1["nombre"] = nombre
+        self.data1["peso"] = peso
+        self.data1["estatura"] = altura
+        self.data1["cintura"] = cintura
+        db.collection("paciente").document(self.ident).setData(self.data1) { error in
+            if let error = error {
+                print("Error: " + error.localizedDescription)
+            } else {
+                print("Información guardada")
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

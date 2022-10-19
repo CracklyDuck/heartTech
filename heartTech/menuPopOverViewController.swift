@@ -38,17 +38,19 @@ class menuPopOverViewController: UIViewController {
         return false
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "fichaMedica") {
             let ficha = segue.destination as! fichaMedicaViewController
             ficha.paciente2 = paciente1
-            ficha.nombre = paciente1.nombre
+            ficha.nombre = String(paciente1.nombre)
             ficha.peso = String(paciente1.peso)
             ficha.altura = String(paciente1.estatura)
             ficha.cintura = String(paciente1.cintura)
             //menu.edge = topBar.UIRectEdge
         }
     }
+     */
     
     /*
     

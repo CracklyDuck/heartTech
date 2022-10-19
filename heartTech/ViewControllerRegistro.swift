@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class ViewControllerRegistro: UIViewController {
@@ -18,12 +19,8 @@ class ViewControllerRegistro: UIViewController {
     @IBOutlet weak var tfRegDia: UITextField!
     @IBOutlet weak var tfRegMes: UITextField!
     @IBOutlet weak var tfRegYear: UITextField!
-    @IBOutlet weak var tfRegPeso: UITextField!
-    @IBOutlet weak var tfRegAltura: UITextField!
-    @IBOutlet weak var tfRegAncho: UITextField!
     
     var regNombre : String!
-    
     
     override func viewDidLoad() {
         tfRegNombre.text = regNombre
@@ -61,8 +58,8 @@ class ViewControllerRegistro: UIViewController {
             //let accion = UIAlertAction(title: "OK", style: .cancel)
             //alerta.addAction(accion)
             //present(alerta, animated: true)
-            createUser(email: tfRegCorreo.text!, pass: tfRegPassword.text!)
-            self.dismiss(animated: true)
+            createUser(email: tfRegCorreo.text!, pass: tfRegPassword.text!, nombre: tfRegNombre.text!)
+            
             //let alerta = UIAlertController(title: "Privacidad", message: "Al registrarse, acepta los términos y codiciones de esta aplicación.", preferredStyle: .alert)
             //let accion = UIAlertAction(title: "OK", style: .cancel)
             //alerta.addAction(accion)
@@ -80,15 +77,30 @@ class ViewControllerRegistro: UIViewController {
         tfRegNombre.text = mensajeRegresado
     }
     
-    func createUser(email: String, pass: String) {
+    func createUser(email: String, pass: String, nombre: String) {
         Auth.auth().createUser(withEmail: email, password: pass) {
             (user, error) in
             if let error = error {
                 print("Error: " + error.localizedDescription)
             } else {
-                print("OK")
+                //print("OK")
+                self.nuevoUsuario(correo: email, contrasena: pass, nombre: nombre)
             }
         }
+    }
+    
+    func nuevoUsuario(correo: String, contrasena: String, nombre: String){
+        let db = Firestore.firestore()
+        let _ = db.collection("paciente").addDocument(data: ["cintura": 0, "codigoEmparejamiento": 1, "contrasena": contrasena, "correo": correo, "estatura": 0, "fechaNacimiento": Timestamp(date: Date()), "idPaciente": correo, "nombre": nombre, "peso": 0, "sexo": ""]) { err in
+            if let err = err {
+                print("Error: " + err.localizedDescription)
+            } else {
+                //print("OK")
+                
+            }
+            self.dismiss(animated: true)
+        }
+        //Inserta funcion para guardar en la BD
     }
     
 

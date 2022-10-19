@@ -48,12 +48,14 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
             } else {
                 for document in QuerySnapshot!.documents {
                     let data = document.data()
+                    
                     paciente1 = paciente(idPaciente: data["idPaciente"] as! String, correo: data["correo"] as! String, contrasena: data["contrasena"] as! String, nombre: data["nombre"] as! String, fechaNacimiento: Date(), sexo: data["sexo"] as! String, estatura: data["estatura"] as! Float, cintura: data["cintura"] as! Float, peso: data["peso"] as! Float, codigoEmparejamiento: (data["codigoEmparejamiento"] as! Double))
                     //self.paciente.fechaNacimiento = (data["fechaNacimiento"] as! Date)
                 }
             }
             
         }
+        //print(paciente1.nombre!)
     }
     
     
@@ -101,7 +103,7 @@ class lobbyViewController: UIViewController, UIPopoverPresentationControllerDele
         if (segue.identifier == "menuPopOver") {
             let menu = segue.destination as! menuPopOverViewController
             menu.popoverPresentationController?.delegate = self
-            menu.paciente1 = paciente1
+            //menu.paciente1 = paciente1
             //menu.edge = topBar.UIRectEdge
         }
     }
